@@ -67,8 +67,8 @@ console.log('------ variables ----------');
 //    console.log('name:', name + ' / course: ', course + ' / month: ', month);
 
     //example 4: declaring multiple variables at once w/ same value
-    var a = b = c = d = 10;
-    console.log ('a:', a + ' / b;', b + ' / c:', c + ' / d;', d);
+    //var a = b = c = d = 10;
+    //console.log ('a:', a + ' / b;', b + ' / c:', c + ' / d;', d);
 
 
 //string (definition, concatenation, escape character)
@@ -79,62 +79,108 @@ console.log('------ strings ----------');
 
     //basic string
 
-    var testString = "He's in PWA1";
-    console.log('Example 1: ', testString);
+//    var testString = "He's in PWA1";
+//    console.log('Example 1: ', testString);
 
     //string w/ escape characters " \ "
 
-    var testString = "I need some \"quotes\" to be here."
-    console.log("Example 2: ", testString);
-
-    var testString = 'He\'s in PWA1';
-    console.log("Example 3: ", testString);
+//    var testString = "I need some \"quotes\" to be here."
+//    console.log("Example 2: ", testString);
+//
+//    var testString = 'He\'s in PWA1';
+//    console.log("Example 3: ", testString);
 
 
     //string w/ escape characters and mixed single/double quotes
-    var testString = 'he\'s in ' + '"PWA1"';
-    console.log('Example 4:', testString);
+    //var testString = 'he\'s in ' + '"PWA1"';
+   // console.log('Example 4:', testString);
 
     //this example shows that all the "phase" vars above were overwritten
-    var num = 3;
-    var testString = 'he\'s in PWA1 ' + num;
-    console.log('Example 5:', testString);
+//    var num = 3;
+//    var testString = 'he\'s in PWA1 ' + num;
+//    console.log('Example 5:', testString);
 
 
 
 // numbers (definition, concatenation +, math, numbers & strings)
-//console.log('------ numbers ----------');
+console.log('------ numbers ----------');
+    //var pi=3.14
+    //var y= 123e5; // 1230000
+    //var z=123e-5; //0.00123
 
     // arithmetic operators:  +, -, /, *, % (modulo)
 
 
     //basic math
 
+    var counter = 10;
+    console.log('basic math:', counter +1);
+console.log('basic math:', counter);
+
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
 
+    var num1 = 10;
+    var num2 = 5;
+    num1 += num2; //or  num1 = num1 + num2;
+
+    console.log('+=:', num1);
 
     //increment or decrement numbers by 1 with ++ or --
 
+    var myNum = 5;
+    console.log('myNum =', myNum);
+
+    myNum++;// adds 1 to number
+    console.log('myNum =', myNum );
+
+    myNum--;// subtracts 1 to number
+    console.log('myNum =', myNum );
+
     //this decrements right before it is being used
 
+    var num = 10;
+    --num;
+    console.log('--counter:', num);
+
+
     //this decrements after it is used
+//    num--;
+//    console.log('counter--:', num);
+
+
 
     //comment out the above example
     //this decrements after it is being used as well
 
+    console.log('counter--:', num--);
+    console.log('counter:', num);
+
 
     //add a number to a string is always a string
 
+    var myStr = '6' + 2;
+    console.log('Number + Strings:', myStr);
 
     //other math operations will result in a number
+
+    var  myStr = '6' / 2;
+    console.log('Number / Strings:', myStr);
 
 
     //order of operations: ( ), *, /, +, -
 
+    var num = 4 + (6 * 5 - 10) / 5;
+    console.log('order of operations:', num);
+
 
     //modulo example
+
+    var num1 = 10;
+    var num2 = 3;
+    console.log('Remainder:', num1%num2); //10/3 = 3 remainder is 1
+
 
 
 // arrays: (definition, indexing, getter/setter)
