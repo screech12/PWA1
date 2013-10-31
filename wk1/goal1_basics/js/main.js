@@ -192,6 +192,7 @@ console.log('basic math:', counter);
      - as an example
         var myArr = new myArr[];
 
+
      - arrays are a unique data type that can hold a collection of values
      - new = create a NEW array object - w/o the NEW it is called a literal array
      - little impact on code if any
@@ -199,7 +200,7 @@ console.log('basic math:', counter);
      - in javascript, arrays are constructed by the brackets [ and ]
 
  */
-  // var myArr = ['bond', 007, function(){}, true];
+   var myArr = ['bond', 007, function(){}, true]; //SAMPLE
 
  /*
     - arrays can hold any value type, separated by comma
@@ -208,6 +209,11 @@ console.log('basic math:', counter);
  */
 
     //arrays can hold any data type
+    console.log('index 0:', myArr[0]);
+    console.log('index 1:', myArr[1]);
+    console.log('index 2:', myArr[2]);
+    console.log('index 3:', myArr[3]);
+    console.log('index 4:', myArr[4]); //undefined, nothing is listed
 
 
 
@@ -219,7 +225,9 @@ console.log('basic math:', counter);
     2.  console.log the sum of all the numbers in an array
 
  ********************************************/
-
+    var array1 = [10,50,100,200];
+    console.log('index 1 is:', array1[1]);
+    console.log('the sun of all numbers', array1[0] + array1[1] + array1[2] + array1[3]);
 
 
 /*******************************************
@@ -236,6 +244,13 @@ console.log('basic math:', counter);
     3. output array items using string concatenation
 
  ********************************************/
+
+    var myArray = new Array();
+    myArray[0] = 'baseball';
+    myArray[1] = 'football';
+    myArray[2] = 'basketball';
+
+    console.log(myArray[0] + ',' + myArray[1] + ',' + myArray[2]);
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
