@@ -444,15 +444,33 @@ console.log('------ conditionals ----------');
  */
 
     //AND logical operator
-
+    if ((1 ===1) && ('hi' === 'hi')){
+        console.log('&& logical operator: both sides = true');
+    };
 
     //OR logical operator
+
+    if ((1 === 1) || ('hi' === 'no')){
+        console.log('|| logical operator: one side = true');
+    };
 
 
     // ! NOT logical operator
 
+    if ( ! (1 === 1) || ('hi' === 'no')){
+     console.log('! NOT logical operator: left is true coverted to not');
+    }else{
+        console.log('! NOT logical operator: both sides = false');
+    };
 
-    // all logical operators with order of operations
+
+// all logical operators with order of operations
+
+    if (5 < 2 || (1 === 1 && ! (2 == '2' || 5 <2))){
+        console.log('logical operator: true');
+      }else{
+        console.log('logical operator: false');
+    };
 
 
 
@@ -468,8 +486,15 @@ console.log('------ conditionals ----------');
     1. learn if - else
  ********************************************/
 
-
-
+    var weather = 'Cloudy';
+        if ( weather === 'Sunny'){
+            bobsMood = 'happy';
+            //if ( weather !== 'Sunny'){
+            //bobsMood = 'happy';// TRUE
+        }else{
+            bobsMood = "sad";
+        };
+        console.log('If-Else weather:', bobsMood);
 
 /*******************************************
  STUDENT ACTIVITY 4:
@@ -487,6 +512,32 @@ console.log('------ conditionals ----------');
     3.  console.log the results after each conditional
  ********************************************/
 
+        var weather = 'Cloudy';
+        var waves = '10';
+
+        if ( weather === 'Sunny'){
+            if (waves === 10){
+                Mood = "PUMPED";
+            }else if ((waves <9) && (wavws >= 5)){
+                Mood = ' mellow';
+            }else{
+                Mood = 'bummed';
+            }
+
+        }else if (weather === 'Overcast'){
+            if ((waves < 10) && (waves >= 7)){
+                Mood = 'jackedUp';
+            }else if ((waves <= 6) && (waves >= 3)){
+                Mood = 'totally bummed';
+
+            }else{
+                Mood = 'not happy';
+            }
+        }else{
+                Mood = 'sad';
+
+        };
+        console.log("Bob's Mood:", Mood);
 
 
 
