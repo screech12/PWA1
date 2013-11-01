@@ -304,6 +304,8 @@ console.log('------ conditionals ----------');
         if (condition) {
             //block of code or ‘actions’
          };
+
+         //Issue with FIREFOX here
 */
     if (5 > 3){
         //execute code here.
@@ -560,9 +562,13 @@ console.log('------ conditionals ----------');
     - ? = perform the next statement if true
     - : = false (perform the new statement after the :)
  */
+    var weather = 'Sunny';
+    //var weather = 'Cloudy';
+    var mood = (weather === 'Sunny' ? 'happy' : 'sad');
+    console.log('mood:', mood);
 
-
-
+    var smile =true;
+console.log('I am '+ ( smile === true ? 'happy': 'sad') + '!!');
 /*******************************************
  STUDENT ACTIVITY 5:
 
@@ -575,6 +581,11 @@ console.log('------ conditionals ----------');
     4.  console.log the results
  ********************************************/
 
+    var temp = 60;
+    //var weather ='Sunny';
+    var weather = 'cold:'
+    var student1 = (weather === 'Sunny' ? 'happy': ((temp >= 80) ? 'content' : 'sad'));
+    console.log('Nested ternary weather:', student1);
 
 
 // Functions: (definition, whitespace, invocation, arguments, returns)
