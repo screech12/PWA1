@@ -354,11 +354,54 @@ console.log('------ conditionals ----------');
  ================================================================
  */
 
+    //if (a < b){ //not defined
+//      if ('a' <  'b'){
+//
+//        //True: run code
+//        console.log('a is less than b');
+//        }else{
+//        //FALSE: run code
+//            console.log('if-else: the "IF" statement is false');
+//      };
 
+        if ('a' ===  'b'){
+
+        //True: run code
+        console.log('a is less than b');
+        }else{
+        //FALSE: run code
+        console.log('if-else: the "IF" statement is false');
+        };
 
     //if - else if - else (allows for multiple options)
 
+//        if ('a' <  'b'){
+//         //True: run code
+//        console.log('a is less than b');
+//
+//            }else if ('a' < 'c'){
+//                console.log('a is less than c');
+//
+//                }else if ('a' < 'd'){
+//                    console.log('a is less than d');
+//        }else{
+//        //FALSE: run code
+//            console.log('if - else if: all others return false');
+//        };
 
+           if ('a' >  'b'){
+          //True: run code
+            console.log('a is less than b');
+
+            }else if ('a' < 'c'){
+                console.log('a is less than c');
+
+                }else if ('a' < 'd'){
+                    console.log('a is less than d');
+            }else{
+             //FALSE: run code
+                console.log('if - else if: all others return false');
+            };
 
     //nested conditional statement
 
