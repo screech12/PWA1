@@ -404,7 +404,27 @@ console.log('------ conditionals ----------');
             };
 
     //nested conditional statement
+//    if ('a' === 'a'){
+//        if ('b' === 'b'){
+//            console.log('In Nested if-else / b === b: True');
+//        }else{
+//            //execute block of code if the match "IF" statement returns false
+//        };
+//    }else{
+//        console.log('nested conditional: 1st IF returned false');
+//
+//    };
 
+        if ('a' !== 'a'){
+            if ('b' === 'b'){
+                console.log('In Nested if-else / b === b: True');
+            }else{
+                //execute block of code if the match "IF" statement returns false
+            };
+        }else{
+            console.log('nested conditional: 1st IF returned false');
+
+        };
 
 
 /* ==============================================================
