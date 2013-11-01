@@ -254,7 +254,7 @@ console.log('basic math:', counter);
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
-//console.log('------ conditionals ----------');
+console.log('------ conditionals ----------');
 
  /*
 
@@ -287,7 +287,9 @@ console.log('basic math:', counter);
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
 
-
+    var myVar = 5 > 3;// = used here is to assign something to var, dues not mean equal too.
+    //alert(myVar); //alerts true
+    console.log('is 5 greater then 3:', myVar);
 
 /*
      most common comparison operators:
@@ -303,7 +305,11 @@ console.log('basic math:', counter);
             //block of code or ‘actions’
          };
 */
-
+    if (5 > 3){
+        //execute code here.
+        //alert ('True!');
+        console.log("'5 > 3:', True!");
+    };
 
 
 /*
@@ -318,8 +324,24 @@ console.log('basic math:', counter);
 
     // == performs a loose check of two values
 
+    if ('1' == 1){
+        console.log("'1' == 1, True");
 
+    };
+    if (1 == 1){
+        console.log("1 == 1, True");
 
+    };
+
+     if ('1' === 1){//does this one designated as astring equal to num 1 ?
+    console.log("'1' == 1, False");
+
+     };
+
+    if ('1' !== 1){ //not equal has three characters (!==)3.
+    console.log("'1' == 1, True");
+
+    };
 /* ==============================================================
     if - else statements (allows only for one option)
 
