@@ -23,9 +23,15 @@
 
     var round = 1;
 
-    function fight (){};
+    function fight (){
+
+        winnerCheck()
+    };
 
     function winnerCheck(){};
+        //code will go here
+
+    /***** The program gets started below *****/
 
     fight();
 
