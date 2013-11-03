@@ -527,6 +527,12 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
+    var bondsCars = function(){
+        return ['ferrari', 'lambo', 'vwBug'];
+    };
+    var cars = bondsCars();  //will return the aray of values
+    console.log('James Bond cars', cars);
+    //James Bond cars ["ferrari", "lambo", "vwBug"]
 
 	/* 
 		Self Executing Functions
@@ -544,6 +550,9 @@ console.log('------ MORE Functions ----------');
 				var fn = (function(){})();	
 	*/	
 
+    //var fn = function(){}; //(function(){}() short cut
+
+    //fn();// this is the call
 
 /*
 	===============================================
