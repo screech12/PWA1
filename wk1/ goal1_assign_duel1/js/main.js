@@ -4,3 +4,8 @@
  * Goal1:  Assignment: The Duel - Part I
  */
 
+//self-executing function
+(function(){
+
+
+})();
