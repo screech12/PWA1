@@ -24,15 +24,15 @@
     var round = 1;
 
     function fight (){
-
-        winnerCheck()
+        console.log('in the fight function');
+        //winnerCheck()
     };
 
     function winnerCheck(){};
         //code will go here
 
     /***** The program gets started below *****/
-
+    console.log('program starts');
     fight();
 
 })();
