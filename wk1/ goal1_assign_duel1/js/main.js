@@ -26,7 +26,14 @@
     function fight (){
         console.log('in the fight function');
 
-        for (var i = 0; i < 10; i++){ }
+        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);
+
+        for (var i = 0; i < 10; i++){
+
+            //random formula is - Math.floor(Math.random() * (max - min) + min);
+            
+            //console.log(i);
+        };
         //winnerCheck()
     };
 
