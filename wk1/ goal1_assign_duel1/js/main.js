@@ -14,13 +14,19 @@
     var playerTwoName = 'Batman';
 
     //player damage
-    var player1Damage = 20;
-    var player2Damage = 20;
+    var player1Damage = 50;
+    var player2Damage = 50;
 
     //player health
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
 
     var round = 1;
+
+    function fight (){};
+
+    function winnerCheck(){};
+
+    fight();
 
 })();
