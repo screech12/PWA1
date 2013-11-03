@@ -7,5 +7,6 @@
 //self-executing function
 (function(){
 
+    console.log('FIGHT!!!')
 
 })();
