@@ -43,8 +43,7 @@
             playerOneHealth-=f1;
             playerTwoHealth-=f2;
 
-            console.log(playerOneHealth);
-            console.log(playerTwoHealth);
+            console.log(playerOneName+":"+playerOneHealth+"     "+playerTwoName+":"+playerTwoHealth);
 
         };
         //winnerCheck()
