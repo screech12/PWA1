@@ -635,6 +635,9 @@ console.log('------For Loop ----------');
 			- the  .length property returns the count, which would be 5	
 	*/	
 
+    var myNums = [1, 2, 3, 4, 5];
+    console.log('length:', myNums.length);
+    //length: 5
 
 	/* 
 		using the for() loop with .length
@@ -655,6 +658,15 @@ console.log('------For Loop ----------');
 			save the array length in a variable, inside the first statement
 	*/
 
+// this is not effectuates to cpu, due to running length
+//    for(var i =0; i<myNums.length; i++){
+//        console.log(myNums[i]);
+//    };
+
+    // better written
+    for(var i=0, j= myNums.length;i< j; i++){
+        console.log(myNums[i]);
+    };
 
 	/*
 		BREAK...
@@ -664,6 +676,14 @@ console.log('------For Loop ----------');
 			break point, and perform no more iterations
 	*/
 
+    for(var i=0, j= myNums.length;i< j; i++){
+        if (i === 3){
+            console.log('testing out the break and it broke');
+            break; //continue
+        };
+
+        console.log('length in loop:', myNums[i]);
+    };
 
 
 	/*
