@@ -1,3 +1,9 @@
+/*
+ * Steven Creech
+ * Date 11/03/2013
+ * Goal2: Assignment JSpractice
+ */
+
 // self-executing function
 (function(){
 
