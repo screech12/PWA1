@@ -26,7 +26,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="519" column="22" selection-start="14603" selection-end="14603" vertical-scroll-proportion="-11.655405" vertical-offset="11160" max-vertical-offset="12180">
+            <state line="805" column="10" selection-start="23673" selection-end="23673" vertical-scroll-proportion="17.317568" vertical-offset="6874" max-vertical-offset="12180">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="-5.0833335" vertical-offset="28" max-vertical-offset="300">
+            <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -88,6 +88,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -122,13 +123,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -137,14 +145,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -306,14 +306,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="-5.0833335" vertical-offset="28" max-vertical-offset="300">
+        <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="519" column="22" selection-start="14603" selection-end="14603" vertical-scroll-proportion="-11.655405" vertical-offset="11160" max-vertical-offset="12180">
+        <state line="805" column="10" selection-start="23673" selection-end="23673" vertical-scroll-proportion="17.317568" vertical-offset="6874" max-vertical-offset="12180">
           <folding />
         </state>
       </provider>
