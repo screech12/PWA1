@@ -1,7 +1,7 @@
 /*
  * Steven Creech
  * Date 11/03/2013
- * Goal1:  Assignment: The Duel - Part I
+ * Goal1:  Assignment: The Duel - Part 2
  */
 
 //self-executing function
