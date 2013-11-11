@@ -12,7 +12,6 @@
 
     var fighter1 = ['Spiderman',50,100];
     var fighter2 = ['Batman',50,100];
-
     var round = 0;
 
     function fight(){
@@ -24,8 +23,8 @@
         for (var i = 0; i < 10; i++){
 
             //random formula is - Math.floor(Math.random() * (max - min) + min);
-            var minDamage1 = fighter1[1] * .5;
-            var minDamage2 = fighter2[1] * .5;
+            var minDamage1 = fighter1[1] * 0.5;
+            var minDamage2 = fighter2[1] * 0.5;
 
             var f1 = Math.floor(Math.random()*(fighter1[1]-minDamage1)+minDamage1);
             var f2 = Math.floor(Math.random()*(fighter2[1]-minDamage2)+minDamage2);

@@ -53,6 +53,15 @@
     console.log("1. avg of an array of numbers");
     var avgNumbers = function(arr){
 
+        function avgNumbers (1,2,3,4,5);{
+
+        };
+/*1.  create a function named 'avgNumbers'
+ - accept 1 parameter into the function that will be an array of unlimited numbers
+ - find the average of all the numbers
+ - return the average from the function
+ - console.log the answer outside of the function*/
+
         //CODE GOES HERE
     };
 
