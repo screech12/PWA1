@@ -112,39 +112,39 @@ console.log('------ Debugging ----------');
 
 
     //Example4:
-	var value1 = 'Sunny';
-	var value2 = 10;
-	
-	var mood = function(weather, waves){
+//	var value1 = 'Sunny';
+//	var value2 = 10;
+//
+//	var mood = function(weather, waves){
+//
+//		if (weather = "Sunny"){
+//			if (waves === 10){
+//				Mood = 'PUMPED';
+//			}else if ((wave < 9) && (waves >= 5)){
+//				Mood = 'mellow';
+//			}else{
+//				Mood = 'bummed';
+//			};
+//
+//		}else if (weather === 'Overcast'){
+//			if ((wave <= 10) || (waves >= 7)){
+//				Mood = "JACKED UP";
+//			}else if ((waves <= 6) && (waves >= 3)){
+//				Mood = 'totally bummed';
+//			}else{
+//				Mood = 'not happy';
+//			};
+//
+//		}else{
+//			Mood = 'sad'
+//		};
+//
+//		return Mood;
+//	};
+//
+//	var moodType = mood(value1, value2);
+//	console.log('mood: ', moodType);
 
-		if (weather = "Sunny"){
-			if (waves === 10){
-				Mood = 'PUMPED';
-			}else if ((wave < 9) && (waves >= 5)){
-				Mood = 'mellow';			
-			}else{
-				Mood = 'bummed';
-			};	
-	
-		}else if (weather === 'Overcast'){
-			if ((wave <= 10) || (waves >= 7)){
-				Mood = "JACKED UP";
-			}else if ((waves <= 6) && (waves >= 3)){
-				Mood = 'totally bummed';			
-			}else{
-				Mood = 'not happy';
-			};
-
-		}else{
-			Mood = 'sad'
-		};
-
-		return Mood;
-	};
-
-	var moodType = mood(value1, value2);
-	console.log('mood: ', moodType);
-       /*
 
     //Example5:
 
@@ -163,7 +163,7 @@ console.log('------ Debugging ----------');
         continue;
         console.log('What is at index ' + i + ' = ', myNums[i] );
     };
-
+        /*
 *****************/
 
 /*
