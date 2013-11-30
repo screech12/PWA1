@@ -53,6 +53,14 @@ console.log('------ variables ----------');
 
     //example 1: variables defined properly
 
+//var name = 'james', course = 'PWA1', month = 3; //or
+
+//    var name = 'james';
+//    var course = 'PWA1';
+//    var month = 3;
+//
+//console.log ('name:', name + ' / course:', course + ' / month:', month);//name: james / course: PWA1 / month: 3
+
 
     //example 2: variables not defined will = "undefined"
 
