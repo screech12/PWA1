@@ -65,6 +65,8 @@ console.log('------ variables ----------');
     //example 2: variables not defined will = "undefined"
 
 
+
+
     //example 3: a mix of variables defined and not defined
 
 
