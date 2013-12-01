@@ -117,32 +117,66 @@ console.log('------ strings ----------');
 
     var num = 3;
     var testString = 'he\'s in PWA1 ' + num;
-    console.log("Example 5: ", testString);//Example 5:  he's in PWA1 3 
+    console.log("Example 5: ", testString);//Example 5:  he's in PWA1 3
 
 
 
 // numbers (definition, concatenation +, math, numbers & strings)
 console.log('------ numbers ----------');
 
+//    var pi = 3.14;
+//    var pi  =314;
+
+    //var y = 123e5; // 12300000
+   // var z = 123e-5; //0.00123
+
     // arithmetic operators:  +, -, /, *, % (modulo)
 
 
     //basic math
 
+    var counter = 10;
+    console.log("basic math: ", counter + 1);//basic math:  11
+    console.log("basic math: ", counter);//basic math:  10
+
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
 
+    var num1 = 10;
+    var num2 = 5;
+    num1 += num2;
+   // num1 = num1 + num2;
+    console.log("+=; ", num1);//+=;  15
 
-    //increment or decrement numbers by 1 with ++ or --
+
+//increment or decrement numbers by 1 with ++ or --
+
+    var myNum = 5;
+    console.log("myNum = ", myNum);//myNum =  5
+
+    myNum++;
+    console.log("myNum = ", myNum);//myNum =  6
+
+    myNum--;
+    console.log("myNum = ", myNum);//myNum =  6
 
     //this decrements right before it is being used
 
+    var num = 10;
+    --num;
+    console.log("--counter: ", num);//--counter:  9
+
+
     //this decrements after it is used
+
+    //num--;
+    //console.log("counter--: ", num);//counter--:  8
 
     //comment out the above example
     //this decrements after it is being used as well
-
+    console.log("counter--: ", num--);//counter--:  9
+    console.log("counter: ", num);//counter:  8 
 
     //add a number to a string is always a string
 
