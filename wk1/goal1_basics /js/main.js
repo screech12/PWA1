@@ -541,8 +541,14 @@ if ("a" > "b"){
     - ? = perform the next statement if true
     - : = false (perform the new statement after the :)
  */
+   // var weather = "Cloudy";
+    var weather = "Sunny";//mood:  happy
+    var mood = (weather === 'Sunny' ?  'happy' : 'sad');
+    console.log("mood: ", mood);//mood:  sad
 
-
+    var smile = true;
+    //var smile = false;//I am sad!!
+    console.log('I am '+ ( smile === true ? 'happy' : 'sad' ) + '!!');//I am happy!!
 
 /*******************************************
  STUDENT ACTIVITY 5:
@@ -555,6 +561,13 @@ if ("a" > "b"){
         - else student1 = 'sad'
     4.  console.log the results
  ********************************************/
+
+    var temp = 60;
+    var weather = "Sunny";
+    //var weather = 'LOL';//Nested ternay weather:  sad
+    var student1 = (weather === 'Sunny' ? 'happy':  ((temp >= 80) ? 'content' : 'sad'));
+    console.log("Nested ternay weather: ", student1);//Nested ternay weather:  happy
+
 
 
 
