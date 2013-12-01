@@ -254,7 +254,7 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
-    //var myArray = [];
+    //var myArray = [];//wrong
 
 var myArray = new Array();
 myArray[0] = "baseball";
@@ -301,7 +301,9 @@ console.log('------ conditionals ----------');
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
 
-
+    var myVar = 5 > 3;
+    //alert(myVar); //alerts true
+    console.log("is 5 greater then 3: ", myVar);//is 5 greater then 3:  true
 
 /*
      most common comparison operators:
@@ -318,7 +320,10 @@ console.log('------ conditionals ----------');
          };
 */
 
-
+    if (5 > 3){
+        //execute code here.
+        console.log("'5 > 3: ', True!");//'5 > 3: ', True!
+    }
 
 /*
     - a common mistake is to use the assignment operator  = instead of the ==
@@ -332,8 +337,20 @@ console.log('------ conditionals ----------');
 
     // == performs a loose check of two values
 
+    if ("1" == 1){
+    console.log("'1' == 1, True");//'1' == 1, True
+    };
 
+if (1 == 1){
+    console.log("1 == 1, True");//1 == 1, True
+}
+    if ("1" === 1){
+        console.log("'1' === 1, False");//does not out put do to being false
+    };
 
+if ("1" !== 1){
+    console.log("'1' !== 1, True");//'1' !== 1, True
+};
 /* ==============================================================
     if - else statements (allows only for one option)
 
@@ -346,14 +363,56 @@ console.log('------ conditionals ----------');
  ================================================================
  */
 
+//    if ("a" < "b"){
+//        //True: run code
+//        console.log("a is less than b");//a is less than b
+//    }else{
+//        //False: run code
+//        console.log("if-else: the 'IF' statement is false");
+//    };
 
+if ("a" === "b"){
+    //True: run code
+    console.log("a is less than b");//a is less tthan b
+}else{
+    //False: run code
+    console.log("if-else: the 'IF' statement is false");//if-else: the 'IF' statement is false
+};
 
     //if - else if - else (allows for multiple options)
 
+//    if ("a" < "b"){
+//       console.log("a is less than b");//a is less than b
+//    }else if ("a" < "c"){
+//        console.log("a is less than c");
+//    }else if ("a" < "d"){
+//        console.log("a is less than d")
+//    }else{
+//        console.log(":if - else if: all others return false");
+//    };
 
-
+if ("a" > "b"){
+    console.log("a is less than b");//a is less than b
+}else if ("a" < "c"){
+    console.log("a is less than c");//a is less than c
+}else if ("a" < "d"){
+    console.log("a is less than d");
+}else{
+    console.log(":if - else if: all others return false");
+};
     //nested conditional statement
+    //if ("a" === "a"){
+        if ("a" !== "a"){
+        if ("b" === "b"){
+        console.log("In Nested if-else / b===b: True");//In Nested if-else / b===b: True
+        }else{
+        // execute block of code if the matching "IF statement"
+        };
 
+    }else{
+        console.log("nested conditional: 1st IF returned false");//nested conditional: 1st IF returned false 
+
+    };
 
 
 /* ==============================================================
