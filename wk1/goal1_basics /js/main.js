@@ -519,7 +519,7 @@ if ("a" > "b"){
     Mood = 'sad';
 
     };
-    console.log("Bob's Mood: ", Mood);//Bob's Mood:  sad 
+    console.log("Bob's Mood: ", Mood);//Bob's Mood:  sad
 
 
 /*
