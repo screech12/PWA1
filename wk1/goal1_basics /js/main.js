@@ -176,7 +176,7 @@ console.log('------ numbers ----------');
     //comment out the above example
     //this decrements after it is being used as well
     console.log("counter--: ", num--);//counter--:  9
-    console.log("counter: ", num);//counter:  8 
+    console.log("counter: ", num);//counter:  8
 
     //add a number to a string is always a string
 
@@ -215,7 +215,11 @@ console.log('------ arrays ----------');
  */
 
     //arrays can hold any data type
-
+    console.log("index 0: ", myArr[0]);//index 0:  bond
+    console.log("index 1: ", myArr[1]);//index 1:  7
+    console.log("index 2: ", myArr[2]);//index 2:  function (){}
+    console.log("index 3: ", myArr[3]);//index 3:  true
+    console.log("index4: ", myArr[4]);//index4:  undefined
 
 
  /*******************************************
@@ -226,6 +230,12 @@ console.log('------ arrays ----------');
     2.  console.log the sum of all the numbers in an array
 
  ********************************************/
+   var array = [10,50,100,200];
+   console.log("array ", array[0] + array[1] + array[2] + array[3]);//array  360
+
+//var array1 = [10,50,100,200];
+//console.log("index 1 is: ", array1[1]);//index 1 is:  50
+//console.log("the sum of all numbers:", array1[0] + array1[1] + array1[2] + array1[3]);//the sum of all numbers: 360
 
 
 
@@ -243,6 +253,18 @@ console.log('------ arrays ----------');
     3. output array items using string concatenation
 
  ********************************************/
+
+    //var myArray = [];
+
+var myArray = new Array();
+myArray[0] = "baseball";
+myArray[1] = "football";
+myArray[2] = "basketball";
+
+console.log(myArray [0] + ',' + myArray[1] + ',' + myArray[2]);//baseball,football,basketball
+
+
+
 
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
