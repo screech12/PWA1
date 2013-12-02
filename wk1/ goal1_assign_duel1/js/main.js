@@ -7,5 +7,19 @@
 // self-executing function
 (function(){
 
+        console.log("FIGHT!!!");
+
+    //player name
+    var playerOneName = "Spiderman";
+    var playerTwoName = "Batman";
+
+    //player damage
+    var player1damage = 20;
+    var player2damage = 20;
+
+    //player health
+    var playerOneHealth = 100;
+    var playerTwoHealth = 100;
+
 
 })();
