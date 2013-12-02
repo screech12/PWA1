@@ -666,10 +666,12 @@ console.log('------Functions ----------');
     var value2 = 2;
 
     var myFn = function(var1, var2){
+                     //(parameter)
         console.log('function number: ', var1 + var2 );
     }
 
-    myFn(value1, value2);//function number:  3 
+    myFn(value1, value2);//function number:  3
+//invoking(arguments)
 
 
 
@@ -685,8 +687,26 @@ console.log('------Functions ----------');
      6.  console.log the results
  ********************************************/
 
+// need to study more, understanding what is being asked to place into code
+    // note use local var as much as possible
+
+    var myctr = 1;//global var
+    var myctr = 50; //Local var
+    var myCounter = function(newct){
 
 
+    myctr += newct;
+   // myctr = myctr + newct;
+    console.log('counter = ', myctr);
+
+};
+//without var myctr = 50;
+    myCounter(5);//counter =  6
+    myCounter(2);//counter =  8
+
+//with var myctr = 50;
+    //myCounter(5);//counter =  55
+    //myCounter(2);//counter =  57
 
 /*******************************************
  function literal: returning values
@@ -698,6 +718,13 @@ console.log('------Functions ----------');
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
 
+    var myFn = function(){
+    return 'jamesBond';
+
+};
+
+    var name = myFn();
+    console.log('name: ', name);//name:  jamesBond 
 
 
     // if a return gives back no value, it instead returns “undefined”
