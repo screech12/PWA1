@@ -613,8 +613,18 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+ */
 
+    var myctr = 1;// global var
 
+    var myCounter = function(){
+        // var testVar = 0:// local var
+        myctr++;
+        console.log('counter = ', myctr);
+    };
+
+    myCounter();//counter =  2
+    myCounter();//counter =  3
 
 
  /*
@@ -652,6 +662,14 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+    var value1 = 1;
+    var value2 = 2;
+
+    var myFn = function(var1, var2){
+        console.log('function number: ', var1 + var2 );
+    }
+
+    myFn(value1, value2);//function number:  3 
 
 
 
