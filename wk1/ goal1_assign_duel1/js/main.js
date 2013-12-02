@@ -21,5 +21,20 @@
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
 
+    var round = 1;
+
+    function fight(){
+        //code will go here
+        winnerCheck()
+    };
+
+
+    function winnerCheck(){
+        //code will go here
+    };
+
+    /******* The program gets started below *****/
+    fight();
+
 
 })();
