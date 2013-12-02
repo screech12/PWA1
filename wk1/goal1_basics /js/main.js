@@ -803,5 +803,5 @@ console.log('------Functions ----------');
 
     var moodType = moodFN(value1, value2);
     console.log("Bob's Mood: ", moodType);//Bob's Mood:  PUMPED
-//Bob's Mood:  totally bummed 
+//Bob's Mood:  totally bummed
 
