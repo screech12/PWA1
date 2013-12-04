@@ -353,6 +353,20 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined;
 
+    var combined = firstQtr.concat(secondQtr);
+    console.log("Concat 2 arrays:", combined);//Concat 2 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+
+    var combined = firstQtr.concat(secondQtr, secondHalfYr);
+    console.log("Concat 3 arrays:", combined);//Concat 3 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+
+    console.log("joined arrays:", combined.join());//joined arrays: Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec
+
+    console.log("Took out -", combined.pop());
+    console.log("Show Array:", combined);//Show Array: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov"]
+
+    var results = secondHalfYr.slice(2,4);
+    console.log("slice:", results);//slice: ["Sept", "Oct"] // does not include index 4 only beginning and between.
+
 
 /*
 	===============================================
