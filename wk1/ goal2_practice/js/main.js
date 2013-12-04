@@ -595,6 +595,8 @@ console.log('------For Loop ----------');
 	*/	
 
 
+    var myNums = [1,2,3,4,5];
+    console.log('length:', myNums.length);//length: 5
 	/* 
 		using the for() loop with .length
 
@@ -614,6 +616,13 @@ console.log('------For Loop ----------');
 			save the array length in a variable, inside the first statement
 	*/
 
+    for(var i=0; i<myNums.length; i++){
+        console.log(myNums[i]);//12345 vertical
+    };
+
+    for(var i= 0, j=myNums.length; i<j; i++){
+        console.log(myNums[i]);// this code would be more efficient
+    };
 
 	/*
 		BREAK...
@@ -623,6 +632,17 @@ console.log('------For Loop ----------');
 			break point, and perform no more iterations
 	*/
 
+    for(var i= 0, j=myNums.length; i<j; i++){
+        if (i ===3){
+            console.log("testing out the break and it broke");
+            break;
+        };
+        console.log('2.length in for loop:', myNums[i]);
+    };
+    //2.length in for loop: 1
+    //2.length in for loop: 2
+    //2.length in for loop: 3
+    //testing out the break and it broke
 
 
 	/*
@@ -632,8 +652,19 @@ console.log('------For Loop ----------');
 			statement will stop a loop’s current iteration, and continue 
 			on to the next iteration
 	*/
+    for(var i= 0, j=myNums.length; i<j; i++){
+        if (i ===3){
+            console.log("testing out the break and it broke");
+            continue;
+        };
+        console.log('length in for loop:', myNums[i]);
+    };
 
-
+    //length in for loop: 1
+    //length in for loop: 2
+    //length in for loop: 3
+    //testing out the break and it broke
+    //length in for loop: 5
 /*******************************************
  STUDENT ACTIVITY 7:
 
