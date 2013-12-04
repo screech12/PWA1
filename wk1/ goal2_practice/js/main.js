@@ -151,55 +151,55 @@ console.log('------Recap Functions ----------');
 	-----------------------------------------------
 */
 
-console.log('------ MORE Strings ----------');
-
-var str1 = 'I love JavaScript! ';
-var str2 = 'JavaScript loves me!';
-var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+//console.log('------ MORE Strings ----------');
+//
+//var str1 = 'I love JavaScript! ';
+//var str2 = 'JavaScript loves me!';
+//var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 // Use charAt() to console.log the 'v' in str1.
-    console.log(str1.charAt(4));//v
+    //console.log(str1.charAt(4));//v
 
 // Use indexOf() to console.log the index of 'm' in str2.
-    console.log(str2.indexOf('m'));//17
+    //console.log(str2.indexOf('m'));//17
 
 // Use lastIndexOf() to console.log the last 'a' in str1.
 
-    console.log(str1.lastIndexOf('a'));//10
+    //console.log(str1.lastIndexOf('a'));//10
 
 // Use length to console.log the length in str1.
 
-    console.log(str1.length);//19
+   // console.log(str1.length);//19
 
 
 // Use split() to console.log an array of the ABC's using the abc variable.
 // EX: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    console.log(abc.split(''));//["A", "B", "C",....
+    //console.log(abc.split(''));//["A", "B", "C",....
 
 
 //STUDENT ACTIVITY 1:
 // Use substr() to console.log 'JavaScript!' from str1.
-    console.log(str1.substr(7,11));//JavaScript!
+   // console.log(str1.substr(7,11));//JavaScript!
 
 
 // Use concat() to console.log 'I love JavaScript ! JavaScript loves me!' with str1 and str2.
-    console.log(str1.concat(str2)); //I love JavaScript! JavaScript loves me!
+    //console.log(str1.concat(str2)); //I love JavaScript! JavaScript loves me!
 
 
 
 //STUDENT ACTIVITY 2:
 // Use substring() to console.log 'JavaScript' from str2.
-    console.log(str2.substring(0, 10));//JavaScript
+    //console.log(str2.substring(0, 10));//JavaScript
 
 
 //STUDENT ACTIVITY 3:
 // 1. Use toLowerCase() to console.log the str1 all in lowercase letters.
 // 2. Use toUpperCase() to console.log the str1 all in uppercase letters.
-    console.log(str1.toLowerCase()); //i love javascript!
-    console.log(str1.toUpperCase()); //I LOVE JAVASCRIPT!
+    //console.log(str1.toLowerCase()); //i love javascript!
+    //console.log(str1.toUpperCase()); //I LOVE JAVASCRIPT!
 
     //use toString() to console log the type of str1.
-    console.log(typeof str1.toString());//string
+    //console.log(typeof str1.toString());//string
 
 
 /*
@@ -210,26 +210,26 @@ var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 console.log('------ MORE Numbers ----------');
 
-    var num = 45786;
-    var dec = 33.123456;
+//    var num = 45786;
+//    var dec = 33.123456;
 
 // Use toExponential() console.log num in exponential notation with two decimals.
 
-    console.log(num.toExponential(2));//4.58e+4
+    //console.log(num.toExponential(2));//4.58e+4
 
 // Use toPrecision() console.log dec as four numbers.
 
-     console.log(dec.toPrecision(4));//33.12
+     //console.log(dec.toPrecision(4));//33.12
 
 //STUDENT ACTIVITY 4:
 //What method would you use to console.log the variable dec with two decimals.
-
-      console.log(dec.toFixed(2));//33.12
-
-
-// Use toString() to console.log the type of num.
-       console.log(typeof num.toString());//string
-
+//
+//      console.log(dec.toFixed(2));//33.12
+//
+//
+//// Use toString() to console.log the type of num.
+//       console.log(typeof num.toString());//string
+//
 
 
 /*
@@ -253,14 +253,14 @@ console.log('------ MORE Numbers ----------');
 
 console.log('------ MORE Booleans ----------');
 
-        var num = 9 * 'K';
-    console.log(num);//NaN
-
-    if(num){
-        console.log("It's true, the value is: ", num);
-    }else{
-        console.log("It's false, the value is: ", num);//It's false, the value is: NaN
-    }
+//        var num = 9 * 'K';
+//    console.log(num);//NaN
+//
+//    if(num){
+//        console.log("It's true, the value is: ", num);
+//    }else{
+//        console.log("It's false, the value is: ", num);//It's false, the value is: NaN
+//    }
 
 	
 /*
@@ -271,30 +271,30 @@ console.log('------ MORE Booleans ----------');
 
 console.log('------ MORE Arrays ----------');
 
-var arr1 = [1, 2, 3, 4, 5, 6, 7];
-var arr2 = ['a', 'b', 'c', 'd', 'e'];
-var arr3 = ['apple', 'orange', 50393, 7.324];
-
-// indexOf()
-//Returns the first (least) index of an element within the array equal
-//to the specified value, or -1 if none is found.
-
-    console.log(arr2.indexOf('c'));//2
+//var arr1 = [1, 2, 3, 4, 5, 6, 7];
+//var arr2 = ['a', 'b', 'c', 'd', 'e'];
+//var arr3 = ['apple', 'orange', 50393, 7.324];
+//
+//// indexOf()
+////Returns the first (least) index of an element within the array equal
+////to the specified value, or -1 if none is found.
+//
+//    console.log(arr2.indexOf('c'));//2
 
 
 // join()
 // Joins all elements of an array into a string.
 
-    console.log(arr2.join(','));//a,b,c,d,e
+    //console.log(arr2.join(','));//a,b,c,d,e
 
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
 
-    var element = arr1.pop();
-    console.log(element);//7
-    console.log(arr1);//[1, 2, 3, 4, 5, 6]
+//    var element = arr1.pop();
+//    console.log(element);//7
+//    console.log(arr1);//[1, 2, 3, 4, 5, 6]
 
 
 // push()
@@ -302,32 +302,32 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
 
-    arr2.push('f');
-    console.log(arr2);//["a", "b", "c", "d", "e", "f"]
+//    arr2.push('f');
+//    console.log(arr2);//["a", "b", "c", "d", "e", "f"]
 
 
 // reverse()
 // Reverses the order of the elements of an array
 
-    console.log(arr1.reverse());//[6, 5, 4, 3, 2, 1]
+//    console.log(arr1.reverse());//[6, 5, 4, 3, 2, 1]
+//
+//// splice()
+//// Adds and/or removes elements from an array.
+//
+//    console.log(arr1);//[6, 5, 4, 3, 2, 1]
+//    console.log(arr1.splice(4,2)); //NOTE: the arry was reversed above //[2, 1]
+//    console.log(arr1);//[6, 5, 4, 3]
+//
 
-// splice()
-// Adds and/or removes elements from an array.
-
-    console.log(arr1);//[6, 5, 4, 3, 2, 1]
-    console.log(arr1.splice(4,2)); //NOTE: the arry was reversed above //[2, 1]
-    console.log(arr1);//[6, 5, 4, 3]
-
-
-// forEach()
-// Calls a function for each element in the array.
-
-    console.log(arr1);//[6, 5, 4, 3]
-    arr1.forEach(function(element, index, array){//element 6, index 0, array [6, 5, 4, 3]
-        console.log('element', element);//element 5
-        console.log('index', index);//index 1
-        console.log('array', array);//array [6, 5, 4, 3]
-    });// continue loop until all itmes in array in completed
+//// forEach()
+//// Calls a function for each element in the array.
+//
+//    console.log(arr1);//[6, 5, 4, 3]
+//    arr1.forEach(function(element, index, array){//element 6, index 0, array [6, 5, 4, 3]
+//        console.log('element', element);//element 5
+//        console.log('index', index);//index 1
+//        console.log('array', array);//array [6, 5, 4, 3]
+//    });// continue loop until all itmes in array in completed
 
 
 
@@ -546,6 +546,13 @@ console.log('------ MORE Functions ----------');
 */
 console.log('------ While / Loop ----------');
 
+    var numOfBeers = 10;
+
+    while (numOfBeers > 0){
+        console.log(numOfBeers + ' kegs on the wall.');//10kegs on the wall....
+        numOfBeers--;
+    }
+
 	
 /*
 	===============================================
@@ -571,6 +578,9 @@ console.log('------ While / Loop ----------');
 
 console.log('------For Loop ----------');
 
+    for (var beers = 10; beers > 0; beers--){
+        console.log(beers + ' bottles of beers on the wall.')//10 bottles of beers on the wall.....
+    };
 
 	/* 
 		array.Length
