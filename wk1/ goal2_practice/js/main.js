@@ -678,7 +678,15 @@ console.log('------For Loop ----------');
 ********************************************/
 
 
-
+    var cartoonDudes =[
+    'Superman',
+    'Batman',
+    'Wolverine',
+    'Iceman'
+];
+    for (var i= 0, j=cartoonDudes.length; i<j; i++){
+        console.log(cartoonDudes[i]);
+    };
 /*******************************************
     STUDENT ACTIVITY 8: (More Practice):
 
