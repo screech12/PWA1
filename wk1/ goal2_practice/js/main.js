@@ -348,24 +348,24 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
         and console.log the results
  ********************************************/
 
-    var firstQtr = ["Jan", "Feb", "Mar"];
-    var secondQtr = ["Apr", "May", "Jun"];
-    var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-    var combined;
-
-    var combined = firstQtr.concat(secondQtr);
-    console.log("Concat 2 arrays:", combined);//Concat 2 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-
-    var combined = firstQtr.concat(secondQtr, secondHalfYr);
-    console.log("Concat 3 arrays:", combined);//Concat 3 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-
-    console.log("joined arrays:", combined.join());//joined arrays: Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec
-
-    console.log("Took out -", combined.pop());
-    console.log("Show Array:", combined);//Show Array: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov"]
-
-    var results = secondHalfYr.slice(2,4);
-    console.log("slice:", results);//slice: ["Sept", "Oct"] // does not include index 4 only beginning and between.
+//    var firstQtr = ["Jan", "Feb", "Mar"];
+//    var secondQtr = ["Apr", "May", "Jun"];
+//    var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+//    var combined;
+//
+//    var combined = firstQtr.concat(secondQtr);
+//    console.log("Concat 2 arrays:", combined);//Concat 2 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+//
+//    var combined = firstQtr.concat(secondQtr, secondHalfYr);
+//    console.log("Concat 3 arrays:", combined);//Concat 3 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+//
+//    console.log("joined arrays:", combined.join());//joined arrays: Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec
+//
+//    console.log("Took out -", combined.pop());
+//    console.log("Show Array:", combined);//Show Array: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov"]
+//
+//    var results = secondHalfYr.slice(2,4);
+//    console.log("slice:", results);//slice: ["Sept", "Oct"] // does not include index 4 only beginning and between.
 
 
 /*
@@ -378,26 +378,26 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 
 console.log('------ MORE Operators - typeof() ----------');
 
-
-    console.log(typeof 5);//number
-    console.log(typeof "Hi");//string
-
-    var str1 = "hello";
-    console.log(typeof  str1);//string
-
-    console.log(typeof true);//boolean
-    console.log(typeof function(){});//function
-
-    console.log(typeof obj1);//undefined
-    console.log(typeof [1,2,3,4,5]);//object // type of array
-    console.log(typeof missingVariable);//undefined // similar to an obj
-
-    console.log(typeof myString=== 'undefined');//true
-    if (typeof myString === 'undefined'){
-        console.log("myString is undefined");//myString is undefined
-    }else{
-        console.log("myString is:", myString);
-    };
+//
+//    console.log(typeof 5);//number
+//    console.log(typeof "Hi");//string
+//
+//    var str1 = "hello";
+//    console.log(typeof  str1);//string
+//
+//    console.log(typeof true);//boolean
+//    console.log(typeof function(){});//function
+//
+//    console.log(typeof obj1);//undefined
+//    console.log(typeof [1,2,3,4,5]);//object // type of array
+//    console.log(typeof missingVariable);//undefined // similar to an obj
+//
+//    console.log(typeof myString=== 'undefined');//true
+//    if (typeof myString === 'undefined'){
+//        console.log("myString is undefined");//myString is undefined
+//    }else{
+//        console.log("myString is:", myString);
+//    };
 
 
 /*
@@ -424,55 +424,55 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
-    //var fruit = "Oranges";
-    //var fruit = "chicken";
-    var fruit = "Mangoes";
-
-    switch (fruit){
-        case "Oranges":
-            console.log("Oranges are $0.59 a pound.");//Oranges are $0.59 a pound.
-            break;
-        case "Apples":
-            console.log("Apples are $0.32 a pound");
-            break;
-        case "Bananas":
-            console.log("Bananas are $.048 a pound");
-            break;
-        case "Cherries":
-            console.log("Cherries are $3.00 a pound.");
-            break;
-        case "Mangoes":
-        case "Papayes":
-            console.log("Mangoes and papayas are $2.79 a pound");//Mangoes and papayas are $2.79 a pound
-            break;
-        default:
-            console.log("Sorry, we are out of " + fruit + ".");//Sorry, we are out of chicken.
-    };
-
-/*******************************************
- STUDENT ACTIVITY 6:
-
-	1.  create a "Switch" conditional that does the following:
-		a.  have a var named "age" initialized to a number
-		b.  if age 13 then console.log "child"
-			if age 18 then console.log "adult"
-			if no age then console.log "No answer"
-********************************************/
-
-        //var age = 12;
-        var age = 13;
-
-        switch (age){
-            case 13:
-                console.log("Child");
-                break;
-            case 18:
-                console.log("Adult");
-                break;
-            default:
-                console.log("No Answer");//No Answer
-                break;
-        };
+//    //var fruit = "Oranges";
+//    //var fruit = "chicken";
+//    var fruit = "Mangoes";
+//
+//    switch (fruit){
+//        case "Oranges":
+//            console.log("Oranges are $0.59 a pound.");//Oranges are $0.59 a pound.
+//            break;
+//        case "Apples":
+//            console.log("Apples are $0.32 a pound");
+//            break;
+//        case "Bananas":
+//            console.log("Bananas are $.048 a pound");
+//            break;
+//        case "Cherries":
+//            console.log("Cherries are $3.00 a pound.");
+//            break;
+//        case "Mangoes":
+//        case "Papayes":
+//            console.log("Mangoes and papayas are $2.79 a pound");//Mangoes and papayas are $2.79 a pound
+//            break;
+//        default:
+//            console.log("Sorry, we are out of " + fruit + ".");//Sorry, we are out of chicken.
+//    };
+//
+///*******************************************
+// STUDENT ACTIVITY 6:
+//
+//	1.  create a "Switch" conditional that does the following:
+//		a.  have a var named "age" initialized to a number
+//		b.  if age 13 then console.log "child"
+//			if age 18 then console.log "adult"
+//			if no age then console.log "No answer"
+//********************************************/
+//
+//        //var age = 12;
+//        var age = 13;
+//
+//        switch (age){
+//            case 13:
+//                console.log("Child");
+//                break;
+//            case 18:
+//                console.log("Adult");
+//                break;
+//            default:
+//                console.log("No Answer");//No Answer
+//                break;
+//        };
 
 /*
 	===============================================
@@ -488,6 +488,13 @@ console.log('------ MORE Conditionals - Switch ----------');
 console.log('------ MORE Functions ----------');
 
 
+        var bondsCars = function(){
+            return['ferrari', 'lambo', 'vwBug'];
+
+        };
+        var cars = bondsCars()
+; //will return the array of values
+        console.log('James Bond cars', cars);//James Bond cars ["ferrari", "lambo", "vwBug"]
 	/* 
 		Self Executing Functions
 	
@@ -504,6 +511,9 @@ console.log('------ MORE Functions ----------');
 				var fn = (function(){})();	
 	*/	
 
+        var fn = function(){};// short cut (function(){}();
+
+        fn();// call to action
 
 /*
 	===============================================
