@@ -210,17 +210,25 @@ var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 console.log('------ MORE Numbers ----------');
 
+    var num = 45786;
+    var dec = 33.123456;
+
 // Use toExponential() console.log num in exponential notation with two decimals.
 
+    console.log(num.toExponential(2));//4.58e+4
 
 // Use toPrecision() console.log dec as four numbers.
 
+     console.log(dec.toPrecision(4));//33.12
 
 //STUDENT ACTIVITY 4:
 //What method would you use to console.log the variable dec with two decimals.
 
+      console.log(dec.toFixed(2));//33.12
+
 
 // Use toString() to console.log the type of num.
+       console.log(typeof num.toString());//string
 
 
 
@@ -245,6 +253,14 @@ console.log('------ MORE Numbers ----------');
 
 console.log('------ MORE Booleans ----------');
 
+        var num = 9 * 'K';
+    console.log(num);//NaN
+
+    if(num){
+        console.log("It's true, the value is: ", num);
+    }else{
+        console.log("It's false, the value is: ", num);//It's false, the value is: NaN
+    }
 
 	
 /*
