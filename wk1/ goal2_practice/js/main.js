@@ -379,6 +379,27 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 console.log('------ MORE Operators - typeof() ----------');
 
 
+    console.log(typeof 5);//number
+    console.log(typeof "Hi");//string
+
+    var str1 = "hello";
+    console.log(typeof  str1);//string
+
+    console.log(typeof true);//boolean
+    console.log(typeof function(){});//function
+
+    console.log(typeof obj1);//undefined
+    console.log(typeof [1,2,3,4,5]);//object // type of array
+    console.log(typeof missingVariable);//undefined // similar to an obj
+
+    console.log(typeof myString=== 'undefined');//true
+    if (typeof myString === 'undefined'){
+        console.log("myString is undefined");//myString is undefined
+    }else{
+        console.log("myString is:", myString);
+    };
+
+
 /*
 	===============================================
 	MORE:  Conditionals (switch())
