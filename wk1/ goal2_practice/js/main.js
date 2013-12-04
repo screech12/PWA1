@@ -279,14 +279,22 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
 
+    console.log(arr2.indexOf('c'));//2
+
 
 // join()
 // Joins all elements of an array into a string.
+
+    console.log(arr2.join(','));//a,b,c,d,e
 
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
+
+    var element = arr1.pop();
+    console.log(element);//7
+    console.log(arr1);//[1, 2, 3, 4, 5, 6]
 
 
 // push()
@@ -294,17 +302,32 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
 
+    arr2.push('f');
+    console.log(arr2);//["a", "b", "c", "d", "e", "f"]
+
 
 // reverse()
 // Reverses the order of the elements of an array
 
+    console.log(arr1.reverse());//[6, 5, 4, 3, 2, 1]
 
 // splice()
 // Adds and/or removes elements from an array.
 
+    console.log(arr1);//[6, 5, 4, 3, 2, 1]
+    console.log(arr1.splice(4,2)); //NOTE: the arry was reversed above //[2, 1]
+    console.log(arr1);//[6, 5, 4, 3]
+
 
 // forEach()
 // Calls a function for each element in the array.
+
+    console.log(arr1);//[6, 5, 4, 3]
+    arr1.forEach(function(element, index, array){//element 6, index 0, array [6, 5, 4, 3]
+        console.log('element', element);//element 5
+        console.log('index', index);//index 1
+        console.log('array', array);//array [6, 5, 4, 3]
+    });// continue loop until all itmes in array in completed
 
 
 
