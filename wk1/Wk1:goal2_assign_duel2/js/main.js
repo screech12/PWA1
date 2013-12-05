@@ -40,7 +40,7 @@
 
            if(results === "no winner"){
                round++;
-               alert(playerOneName+":"+playerOneHealth+ " *Round "+round+" OVER*"+"* "+playerTwoName+":"+playerTwoHealth);
+               alert(fighter1[0]+":"+fighter1 [2]+" *ROUND "+round +"  OVER"+"*  "+fighter2[0]+":"+fighter2[2]);
            }else{
                alert(results);
                break;
