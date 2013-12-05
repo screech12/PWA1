@@ -96,28 +96,28 @@ console.log('------ Debugging ----------');
 
     //Example3:
 	//nested conditional statement
-	if ("a" === "a"){    //1st IF statement
-		//execute this block of code if a is equal to a
-		
-		if ("b" === "b"){  //nested IF statement : 2nd IF statement
-   			//execute this block of code if b is equal to b
-   			console.log("In Nested if-else / b === b: True");
-		}else{       //nested ELSE statement
-			//execute block of code if the matching “IF” statement returns false
-		};
+//	if ("a" === "a"){    //1st IF statement
+//		//execute this block of code if a is equal to a
+//
+//		if ("b" === "b"){  //nested IF statement : 2nd IF statement
+//   			//execute this block of code if b is equal to b
+//   			console.log("In Nested if-else / b === b: True");
+//		}else{       //nested ELSE statement
+//			//execute block of code if the matching “IF” statement returns false
+//		};
+//
+//	}else{
+//		//execute this block of code if the 1st “IF” statement returns false
+//		console.log("nested conditional: 1st IF returned false");
+//	};
 
-	}else{
-		//execute this block of code if the 1st “IF” statement returns false
-		console.log("nested conditional: 1st IF returned false");
-	};
 
-    /*
 
     //Example4:
 	var value1 = 'Sunny';
 	var value2 = 10;
 	
-	var mood = function(weather, waves)
+	var mood = function(weather, waves){
 
 		if (weather = "Sunny"){
 			if (waves === 10){
@@ -129,11 +129,11 @@ console.log('------ Debugging ----------');
 			};	
 	
 		}else if (weather === 'Overcast'){
-			if ((wave <= 10) !! (waves >= 7)){
+			if ((wave <= 10) || (waves >= 7)){
 				Mood = "JACKED UP";
 			}else if ((waves <= 6) && (waves >= 3)){
 				Mood = 'totally bummed';			
-			)else{
+            }else{
 				Mood = 'not happy';
 			};
 
@@ -141,12 +141,13 @@ console.log('------ Debugging ----------');
 			Mood = 'sad'
 		};
 
-		return Moood;
+		return Mood;
 	};
 
 	var moodType = mood(value1, value2);
 	console.log('mood: ', moodType);
 
+     /*
 
     //Example5:
 
