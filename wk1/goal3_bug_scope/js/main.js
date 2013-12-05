@@ -195,26 +195,26 @@ console.log('------ Debugging ----------');
     console.log('------ Try Catch ----------');
 
 
-    var return10 = function(){
-        //return 1;
-        //return num;
-        return 15;
-    };
-
-    var num = return10();
-
-    try
-    {
-        if(num ==="") throw "empty";
-        if(isNaN(num))throw "not a number";//not a number
-        if(num > 10)throw "too high";//too high
-        if(num <10) throw "too low";// too low
-    }
-
-    catch(err)
-    {
-        console.log(err);
-    };
+//    var return10 = function(){
+//        //return 1;
+//        //return num;
+//        return 15;
+//    };
+//
+//    var num = return10();
+//
+//    try
+//    {
+//        if(num ==="") throw "empty";
+//        if(isNaN(num))throw "not a number";//not a number
+//        if(num > 10)throw "too high";//too high
+//        if(num <10) throw "too low";// too low
+//    }
+//
+//    catch(err)
+//    {
+//        console.log(err);
+//    };
 
 
 /*
@@ -282,20 +282,20 @@ console.log('------ Debugging ----------');
 */
 console.log("---------- Scope & Context ----------------");
 
-    var myctr = 0;
-
-    var myCounter1 = function(newct){
-
-        //myctr = newct + 10;
-        var myctr = newct + 10;
-
-        console.log('function:',myctr);//function: 15
-
-    };
-
-
-    myCounter1(5);
-    console.log('after function myctr:',myctr);//after function myctr: 15 //fter function myctr: 0 uses GLOBAL var
+//    var myctr = 0;
+//
+//    var myCounter1 = function(newct){
+//
+//        //myctr = newct + 10;
+//        var myctr = newct + 10;
+//
+//        console.log('function:',myctr);//function: 15
+//
+//    };
+//
+//
+//    myCounter1(5);
+//    console.log('after function myctr:',myctr);//after function myctr: 15 //fter function myctr: 0 uses GLOBAL var
 
 /*
 	===================================================================
@@ -303,27 +303,31 @@ console.log("---------- Scope & Context ----------------");
 
 	- Whenever you see the function keyword within another function, the inner function 
 		has access to variables of the outer function.
+		Snap shot of a function outer environment when it was created.
 */
 
     console.log("---------- Closure ----------------");
 
-    var fname = "James";
+    var fname = 'James';
 
     var nameFN = function (var1){
         var firstName = var1;
-        var lastName = "Bond";
+        var lastName = 'Bond';
         var name = firstName +''+ lastName;
 
-        var closureFN = function(){}
+        var closureFN = function(){
         console.log('first & last name: = ', name);//first & last name: = JamesBond
-        return name;
+    }
+        //return name;
+        return closureFN;
     };
 
      var fullName = nameFN(fname);
-    console.log('returned full name: = ', fullName);//returned full name: = JamesBond
-    console.log('var fname: = ', fname);//var fname: = James
+    //console.log('returned full name: = ', fullName);//returned full name: = JamesBond
+    //console.log('var fname: = ', fname);//var fname: = James
 //    console.log('first name: ',firstName);
 //    console.log('last name: ', lastName);
+    fullName();
 
 
 
