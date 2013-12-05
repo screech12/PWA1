@@ -153,8 +153,8 @@ console.log('------ Debugging ----------');
 
     var myNums = [1, 2, 3, 4, 5];
     console.log(myNums);
-
-    for (var i=1, j=myNums.length; i < j; i++){
+//  for (var i=10, j=myNums.length; i < j; i++){ //index always starts with 0
+    for (var i=0, j=myNums.length; i < j; i++){
 
         console.log("i: " + i);
         console.log("j: " + j);
@@ -163,10 +163,10 @@ console.log('------ Debugging ----------');
             console.log("testing out the break and it broke");
         };
 
-        continue;
+//        continue; // does not belong will not allow console to run
         console.log('What is at index ' + i + ' = ', myNums[i] );
+        continue;
     };
-
       /*
 *****************/
 
