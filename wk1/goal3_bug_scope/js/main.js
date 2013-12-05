@@ -82,35 +82,36 @@ console.log('------ Debugging ----------');
      display.  You may want to see the error messages in Chrome and Firefox.
  ***********************/
 
- /*
+
 	//Example1
-	var name = james, course = 'PWA1, month = 3;
-	console.log ("name: ", name + " / course: ", coures + " / month: ", month)
+//	var name = "james", course = 'PWA1', month = 3;
+//	console.log ("name: ", name + " / course: ", course + " / month: ", month)
 
 
     //Example2:
 	//string w/ escape charaters and mixed single/double quotes
-	var phrase = 'he's in ' + ' "PWA1' ";
-	console.log("phase 4: ", phr@se);
+//	var phrase = 'he\'s in ' + ' "PWA1 "';
+//	console.log("phase 4: ", phrase);
 
 
     //Example3:
 	//nested conditional statement
-	if (a === a){    //1st IF statement
+	if ("a" === "a"){    //1st IF statement
 		//execute this block of code if a is equal to a
 		
-		if (b === b){  //nested IF statement : 2nd IF statement
+		if ("b" === "b"){  //nested IF statement : 2nd IF statement
    			//execute this block of code if b is equal to b
    			console.log("In Nested if-else / b === b: True");
 		}else{       //nested ELSE statement
 			//execute block of code if the matching “IF” statement returns false
 		};
 
-	}else
+	}else{
 		//execute this block of code if the 1st “IF” statement returns false
-		console.log("nested conditional: 1st IF returned false);
+		console.log("nested conditional: 1st IF returned false");
 	};
 
+    /*
 
     //Example4:
 	var value1 = 'Sunny';
