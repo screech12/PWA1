@@ -308,19 +308,19 @@ console.log("---------- Scope & Context ----------------");
 
     console.log("---------- Closure ----------------");
 
-    var fname = 'James';
-
-    var nameFN = function (var1){
-        var firstName = var1;
-        var lastName = 'Bond';
-        var name = firstName +''+ lastName;
-
-        var closureFN = function(){
-        console.log('first & last name: = ', name);//first & last name: = JamesBond
-    }
-        //return name;
-        return closureFN;
-    };
+//    var fname = 'James';
+//
+//    var nameFN = function (var1){
+//        var firstName = var1;
+//        var lastName = 'Bond';
+//        var name = firstName +''+ lastName;
+//
+//        var closureFN = function(){
+//        console.log('first & last name: = ', name);//first & last name: = JamesBond
+//    }
+//        //return name;
+//        return closureFN;
+//    };
 
      var fullName = nameFN(fname);
     //console.log('returned full name: = ', fullName);//returned full name: = JamesBond
@@ -360,5 +360,25 @@ console.log("---------- Scope & Context ----------------");
                   called a closure.  Simply accessing variables outside of its
                   immediate lexical scope creates a closure.
     */
+
+    a = (function(){
+        var privateFunction = function(){
+            privateFunction();
+            alert('hello');
+        }
+        return{
+            publicFunction:function(){
+                privateFunction();
+
+        }
+
+    }
+
+
+})();
+
+
+    a.publicFunction();
+
 
 })(); // end wrapper
