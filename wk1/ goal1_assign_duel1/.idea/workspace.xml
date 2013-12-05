@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="500" selection-end="558" vertical-scroll-proportion="-6.5" vertical-offset="369" max-vertical-offset="660">
+            <state line="9" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.4856115" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="30" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0066225166" vertical-offset="313" max-vertical-offset="1365">
+            <state line="21" column="30" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1365">
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="681" />
+    <option name="x" value="358" />
     <option name="y" value="22" />
     <option name="width" value="759" />
     <option name="height" value="438" />
@@ -130,14 +130,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -146,6 +138,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -171,7 +171,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="681" y="22" width="759" height="438" extended-state="0" />
+    <frame x="358" y="22" width="759" height="438" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -205,6 +205,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="500" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="30" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="313" max-vertical-offset="1365">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="500" selection-end="558" vertical-scroll-proportion="0.0" vertical-offset="382" max-vertical-offset="660">
@@ -254,16 +268,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="500" selection-end="558" vertical-scroll-proportion="-6.5" vertical-offset="369" max-vertical-offset="660">
+        <state line="21" column="30" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="1063" max-vertical-offset="1365">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="30" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0066225166" vertical-offset="313" max-vertical-offset="1365">
+        <state line="9" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.4856115" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
