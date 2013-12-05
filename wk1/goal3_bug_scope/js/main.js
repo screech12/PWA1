@@ -282,9 +282,20 @@ console.log('------ Debugging ----------');
 */
 console.log("---------- Scope & Context ----------------");
 
+    var myctr = 0;
+
+    var myCounter1 = function(newct){
+
+        //myctr = newct + 10;
+        var myctr = newct + 10;
+
+        console.log('function:',myctr);//function: 15
+
+    };
 
 
-
+    myCounter1(5);
+    console.log('after function myctr:',myctr);//after function myctr: 15 //fter function myctr: 0 uses GLOBAL var
 
 /*
 	===================================================================
