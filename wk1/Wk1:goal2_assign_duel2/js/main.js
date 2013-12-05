@@ -10,22 +10,22 @@
         console.log("FIGHT!!!");
 
     //player name
-    var fighter1 = ['Spiderman',50,100];
-    var fighter2 = ['Batman', 50,100];
+    var fighter1 = ['Spiderman',20,100];
+    var fighter2 = ['Batman', 20,100];
     var round = 0;
 
     function fight(){
        console.log('in the fight function');
 
-       alert(playerOneName+":"+playerOneHealth+" *START* "+playerTwoName+":"+playerTwoHealth);
+        alert(fighter1[0]+":"+fighter1[2]+" *START*   "+fighter2[0]+":"+fighter2[2]);
 
        for (var i = 0; i < 10; i++){
          //random formula is - Math.floor(Math.random() * (max - min) + min;
 
-           var minDamage1 = fighter1 * .5;
-           var minDamage2 = fighter2 * .5;
-           var f1 = Math.floor(Math.random()*(fighter[1]-minDamage1)+minDamage1);
-           var f2 = Math.floor(Math.random()*(fighter[2]-minDamage2)+minDamage2);
+           var minDamage1 = fighter1[1] * .5;
+           var minDamage2 = fighter2[1] * .5;
+           var f1 = Math.floor(Math.random()*(fighter1[1]-minDamage1)+minDamage1);
+           var f2 = Math.floor(Math.random()*(fighter2[2]-minDamage2)+minDamage2);
 
            //console.log(f1);
            //console.log(f2);
