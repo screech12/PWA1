@@ -307,6 +307,26 @@ console.log("---------- Scope & Context ----------------");
 
     console.log("---------- Closure ----------------");
 
+    var fname = "James";
+
+    var nameFN = function (var1){
+        var firstName = var1;
+        var lastName = "Bond";
+        var name = firstName +''+ lastName;
+
+        var closureFN = function(){}
+        console.log('first & last name: = ', name);//first & last name: = JamesBond
+        return name;
+    };
+
+     var fullName = nameFN(fname);
+    console.log('returned full name: = ', fullName);//returned full name: = JamesBond
+    console.log('var fname: = ', fname);//var fname: = James
+//    console.log('first name: ',firstName);
+//    console.log('last name: ', lastName);
+
+
+
 
 
     /*
