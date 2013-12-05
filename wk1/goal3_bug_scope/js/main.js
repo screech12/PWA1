@@ -151,22 +151,22 @@ console.log('------ Debugging ----------');
 
     //Example5:
 
-    var myNums = [1, 2, 3, 4, 5];
-    console.log(myNums);
-//  for (var i=10, j=myNums.length; i < j; i++){ //index always starts with 0
-    for (var i=0, j=myNums.length; i < j; i++){
-
-        console.log("i: " + i);
-        console.log("j: " + j);
-
-        if (i === 3) {
-            console.log("testing out the break and it broke");
-        };
-
-//        continue; // does not belong will not allow console to run
-        console.log('What is at index ' + i + ' = ', myNums[i] );
-        continue;
-    };
+//    var myNums = [1, 2, 3, 4, 5];
+//    console.log(myNums);
+////  for (var i=10, j=myNums.length; i < j; i++){ //index always starts with 0
+//    for (var i=0, j=myNums.length; i < j; i++){
+//
+//        console.log("i: " + i);
+//        console.log("j: " + j);
+//
+//        if (i === 3) {
+//            console.log("testing out the break and it broke");
+//        };
+//
+////        continue; // does not belong will not allow console to run
+//        console.log('What is at index ' + i + ' = ', myNums[i] );
+//        continue;
+//    };
       /*
 *****************/
 
@@ -193,6 +193,28 @@ console.log('------ Debugging ----------');
   		}
 */
     console.log('------ Try Catch ----------');
+
+
+    var return10 = function(){
+        //return 1;
+        //return num;
+        return 15;
+    };
+
+    var num = return10();
+
+    try
+    {
+        if(num ==="") throw "empty";
+        if(isNaN(num))throw "not a number";//not a number
+        if(num > 10)throw "too high";//too high
+        if(num <10) throw "too low";// too low
+    }
+
+    catch(err)
+    {
+        console.log(err);
+    };
 
 
 /*
