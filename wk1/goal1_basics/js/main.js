@@ -67,8 +67,8 @@ console.log('------ variables ----------');
 
     //example 3: a mix of variables defined and not defined
 
-        var name, course = "PWA1", month;
-        console.log ("name:", name + "/ course:", course + " / month: ",month);
+//        var name, course = "PWA1", month;
+//        console.log ("name:", name + "/ course:", course + " / month: ",month);
 
 
     //example 4: declaring multiple variables at once w/ same value
@@ -80,18 +80,34 @@ console.log('------ variables ----------');
 // string (definition, concatenation, escape character)
 console.log('------ strings ----------');
 
+         var name = "James Bond";
+        console.log(name);
+
     //basic string
+
+    var testString = "He's in PWA1";
+    console.log("Example 1: ", testString);//Example 1:  He's in PWA1
 
 
     //string w/ escape characters " \ "
 
+    var testString = "I need some \"quotes\" to be here.";
+    console.log("Example 2:", testString);//Example 2: I need some "quotes" to be here.
+
+    var testString = 'He\'s in PWA1';
+    console.log("Example 3: ", testString);//Example 3:  He's in PWA1
 
     //string w/ escape characters and mixed single/double quotes
+
+    var testString = 'he\'s in ' + '"PWA1"';
+    console.log("Example 4: ", testString);//Example 4:  he's in "PWA1"
 
 
     //this example shows that all the "phase" vars above were overwritten
 
-
+    var num = 3
+    var testString = 'he\'s in PWA1 ' + num;
+    console.log("Example 5: ", testString);//Example 5:  he's in PWA1 3
 
 // numbers (definition, concatenation +, math, numbers & strings)
 console.log('------ numbers ----------');
