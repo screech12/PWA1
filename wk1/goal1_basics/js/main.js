@@ -112,37 +112,81 @@ console.log('------ strings ----------');
 // numbers (definition, concatenation +, math, numbers & strings)
 console.log('------ numbers ----------');
 
+//var pi=3.14
+//var pi = 314
+//scientific notation
+//var y=123e5;  //12300000
+//var z=123e-5; // 0.00123
+
+
     // arithmetic operators:  +, -, /, *, % (modulo)
 
 
     //basic math
-
+    var counter = 10;
+    console.log("basic math: ", counter + 1);//basic math:  11
+console.log("basic math: ", counter);//basic math:  10
 
     //quick operations with "assignment operator" +=, -=, *=, /=, %=
     //one example below, can show more examples with other assignment operators
 
+    var num1 = 10;
+    var num2 = 5;
+    num1 += num2
+    //num1 = num1 + num2;
+    console.log("+=: ", num1);//+=:  15
+
 
     //increment or decrement numbers by 1 with ++ or --
 
+    var myNum = 5;
+    console.log("myNum = ", myNum);//myNum =  5
+
+    myNum++;
+    console.log("myNum = ", myNum);//myNum =  6
+
+     myNum--;
+     console.log("myNum = ", myNum);//myNum =  5
     //this decrements right before it is being used
+
+    var num = 10;
+    --num;
+
+    console.log("--counter: ", num);//--counter:  9
 
     //this decrements after it is used
 
+    //num--;
+    //console.log("counter--: ", num);//counter--:  8
+
     //comment out the above example
     //this decrements after it is being used as well
+    console.log("counter--: ", num--);//counter--:  9
+    console.log("counter: ", num);//counter:  8
 
 
     //add a number to a string is always a string
 
+    var myStr = "6" + 2;
+    console.log("Number + Strings: ", myStr);//Number + Strings:  62 A string combines the two together, a  number will add the two together.
+
 
     //other math operations will result in a number
+
+    var myStr = "6" / 2;
+    console.log("Number / Strings: ", myStr);//Number / Strings:  3
 
 
     //order of operations: ( ), *, /, +, -
 
+    var num = 4 + (6 * 5 - 10) / 5;
+    console.log("order of operation: ", num);//order of operation:  8
 
     //modulo example
 
+    var num1 = 10;
+    var num2 = 3;
+console.log("Remainder:", num1%num2);//Remainder: 1
 
 // arrays: (definition, indexing, getter/setter)
 console.log('------ arrays ----------');
@@ -170,6 +214,11 @@ console.log('------ arrays ----------');
 
     //arrays can hold any data type
 
+    console.log("index 0: ", myArr[0]);//index 0:  bond
+    console.log("index 1: ", myArr[1]);//index 1:  7
+    console.log("index 2: ", myArr[2]);//index 2:  function (){}
+    console.log("index 3: ", myArr[3]);//index 3:  true
+    console.log("index 4: ", myArr[4]);//index 4:  undefined
 
 
  /*******************************************
@@ -181,7 +230,12 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
-
+    var Array1 = [10,50,100,200];
+    console.log("index 0 is: ", Array1[0]);//index 1 is:  50
+    console.log("index 1 is: ", Array1[1]);
+    console.log("index 2 is: ", Array1[2]);
+    console.log("index 3 is: ", Array1[3]);
+    console.log("the sum of all numbers ", Array1[0] + Array1[1] + Array1[2] + Array1[3]);//the sum of all numbers  360
 
 /*******************************************
 
@@ -198,6 +252,12 @@ console.log('------ arrays ----------');
 
  ********************************************/
 
+    var myArray = new Array();
+    myArray[0] = "baseball";
+    myArray[1] = "football";
+    myArray[2] = "basketball";
+
+    console.log(myArray[0] + ', '+ myArray[1] + ', ' + myArray[2]);//baseball, football, basketball
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
 console.log('------ conditionals ----------');
@@ -233,7 +293,8 @@ console.log('------ conditionals ----------');
     - conditions can be used just about anywhere, not just in conditionals and loops
 */
 
-
+    var myVar = 5 > 3;
+    console.log("is 5 greater then 3: ", myVar);//is 5 greater then 3:  true
 
 /*
      most common comparison operators:
@@ -250,6 +311,10 @@ console.log('------ conditionals ----------');
          };
 */
 
+    if (5 > 3){
+       // execute code here.
+        console.log("'5 > 3:', True!");//'5 > 3:', True!
+    };
 
 
 /*
@@ -264,7 +329,10 @@ console.log('------ conditionals ----------');
 
     // == performs a loose check of two values
 
+    if ("1" == 1){
+        console.log("'1' == 1, True");'1' == 1, True
 
+    };
 
 /* ==============================================================
     if - else statements (allows only for one option)
