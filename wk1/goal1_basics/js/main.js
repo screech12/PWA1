@@ -484,32 +484,32 @@ console.log('------ conditionals ----------');
     3.  console.log the results after each conditional
  ********************************************/
 
-    var waves = 10;
-    var weather = 'Cloudy';
-
-    if (weather === 'Sunny'){
-        if (waves === 10){
-            Mood = 'PUMPED';
-
-        }else if ((waves <= 9) && (waves >= 5)){
-            Mood = 'mellow';
-        }else{
-            Mood = 'bummed';
-        }
-        }else if(weather === "Overcast"){
-            if((waves < 10) && (waves >=7)){
-            Mood = "jackedUP";
-
-            }else if ((waves < 6) && (waves >= 3)){
-                Mood = 'totally bummed';
-            }else{
-                Mood = 'not happy';
-            }
-    }else{
-        Mood = 'sad';//Bob's Mood:  sad
-    };
-        console.log("Bob's Mood: ", Mood);
-
+//    var waves = 10;
+//    var weather = 'Cloudy';
+//
+//    if (weather === 'Sunny'){
+//        if (waves === 10){
+//            Mood = 'PUMPED';
+//
+//        }else if ((waves <= 9) && (waves >= 5)){
+//            Mood = 'mellow';
+//        }else{
+//            Mood = 'bummed';
+//        }
+//        }else if(weather === "Overcast"){
+//            if((waves < 10) && (waves >=7)){
+//            Mood = "jackedUP";
+//
+//            }else if ((waves < 6) && (waves >= 3)){
+//                Mood = 'totally bummed';
+//            }else{
+//                Mood = 'not happy';
+//            }
+//    }else{
+//        Mood = 'sad';//Bob's Mood:  sad
+//    };
+//        console.log("Bob's Mood: ", Mood);
+//
 
 /*
     BREAKING A TERNARY CONDITIONAL DOWN TO INDIVIDUAL PIECES
@@ -717,6 +717,20 @@ var myCounter = function(newct){
     4.  console.log the results
  ********************************************/
 
+var myctr = 1;
+
+var myCounter = function(newct){
+var myctr = 50;
+    myctr += newct;// or myctr = myctr + newct;
+    return myctr;
+
+
+};
+var cnt = myCounter(5);
+console.log('counter = ', cnt);//counter =  55
+
+var cnt = myCounter(2);
+console.log('counter = ', cnt);//counter =  52
 
 
 
@@ -730,3 +744,34 @@ var myCounter = function(newct){
  5. console.log the Results
  ********************************************/
 
+var value2 = 10;
+var value1 = 'Sunny';
+var moodFn = function(weather, waves){
+
+if (weather === 'Sunny'){
+    if (waves === 10){
+        Mood = 'PUMPED';
+
+    }else if ((waves <= 9) && (waves >= 5)){
+        Mood = 'mellow';
+    }else{
+        Mood = 'bummed';
+    }
+}else if(weather === "Overcast"){
+    if((waves < 10) && (waves >=7)){
+        Mood = "jackedUP";
+
+    }else if ((waves < 6) && (waves >= 3)){
+        Mood = 'totally bummed';
+    }else{
+        Mood = 'not happy';
+    }
+}else{
+    Mood = 'sad';//Bob's Mood:  sad
+
+    return Mood;
+};
+var moodType = moodFn(value1, value2);
+
+console.log("Bob's Mood: ", MoodType);
+};
