@@ -330,10 +330,22 @@ console.log('------ conditionals ----------');
     // == performs a loose check of two values
 
     if ("1" == 1){
-        console.log("'1' == 1, True");'1' == 1, True
+        console.log("'1' == 1, True");//'1' == 1, True
+
+    };
+    if (1 == 1){
+    console.log("1 == 1, True");//1 == 1, True
 
     };
 
+    if ("1" === 1){
+    console.log("'1' === 1, False");// no output
+
+    };
+
+    if ("1" !== 1){
+    console.log("'1' !== 1, True");// '1' !== 1, True
+    };
 /* ==============================================================
     if - else statements (allows only for one option)
 
@@ -345,14 +357,44 @@ console.log('------ conditionals ----------');
 
  ================================================================
  */
-
+    if ("a" < "b"){
+        //if ("a" === "b"){
+        //TRUE: run code
+        console.log("a is less than b");//a is less than b
+    }else{
+        //FALSE: run code
+        console.log("if else: the 'IF' statement is false");//if else: the 'IF' statement is false
+    };
 
 
     //if - else if - else (allows for multiple options)
-
+    // checks each item in order, until find a true statement.
+    if ("a" < "b"){//("a" < "b") next line
+        console.log("a is less than b");
+    }else if ("a" < "c"){
+        console.log("a is less than c");
+    }else if ("a" < "d"){
+        console.log("a is less than d");
+    }else{//catch all
+        console.log("if - else if: all others returned false");
+    };
 
 
     //nested conditional statement
+
+    if ("a" === "a"){
+        //if ("a" !== "a"){ rtn next code
+
+        if("b" === "b"){
+         console.log("In Nested if-else / b === b: True");//In Nested if-else / b === b: True
+        }else{
+            //execute block of code if the matching "IF" statement returns false
+        };
+
+
+    }else{
+        console.log("nested conditional: 1st IF returned false");
+    };
 
 
 
@@ -368,21 +410,39 @@ console.log('------ conditionals ----------');
     1. condition1 && condition2	// AND (both must be true)
     2. condition1 || condition2	// OR (either must be true)
 
-    Always put simpler conditions on the left
+    Always put simpler conditions on the left more complex on the right side
  ================================================================
  */
 
     //AND logical operator
+    if ((1 === 1) && ("hi" === "hi")){
+        console.log('&& logical operator: both sides = true');
+    };//&& logical operator: both sides = true
 
 
     //OR logical operator
 
+    if ((1 === 1) || ("hi" === "no")){
+        console.log('|| logical operator: one side = true');
+    };//|| logical operator: one side = true
+
 
     // ! NOT logical operator
+
+    if (!(1 === 1)||("hi" === "no")){
+        console.log('! NOT logical operator: left is true converted to not');
+    }else{
+        console.log('! NOT logical operator: both sides = false');
+    };//! NOT logical operator: both sides = false
 
 
     // all logical operators with order of operations
 
+    if (5 < 2 || (1 === 1 && ! (2 == "2" || 5 < 2))){
+        console.log('logical operator: true');
+    }else{
+        console.log('logical operator: false');
+    };//logical operator: false
 
 
 /*******************************************
@@ -397,7 +457,15 @@ console.log('------ conditionals ----------');
     1. learn if - else
  ********************************************/
 
+    var weather = 'Cloudy';
 
+    if (weather === 'Sunny'){
+        bobsMood = 'happy';
+
+    }else{
+        bobsMood = "sad";
+    };
+        console.log("if-Else weather: ", bobsMood);//if-Else weather:  sad
 
 
 /*******************************************
@@ -416,7 +484,31 @@ console.log('------ conditionals ----------');
     3.  console.log the results after each conditional
  ********************************************/
 
+    var waves = 10;
+    var weather = 'Cloudy';
 
+    if (weather === 'Sunny'){
+        if (waves === 10){
+            Mood = 'PUMPED';
+
+        }else if ((waves <= 9) && (waves >= 5)){
+            Mood = 'mellow';
+        }else{
+            Mood = 'bummed';
+        }
+        }else if(weather === "Overcast"){
+            if((waves < 10) && (waves >=7)){
+            Mood = "jackedUP";
+
+            }else if ((waves < 6) && (waves >= 3)){
+                Mood = 'totally bummed';
+            }else{
+                Mood = 'not happy';
+            }
+    }else{
+        Mood = 'sad';//Bob's Mood:  sad
+    };
+        console.log("Bob's Mood: ", Mood);
 
 
 /*
@@ -439,8 +531,13 @@ console.log('------ conditionals ----------');
     - : = false (perform the new statement after the :)
  */
 
+    var weather = 'Cloudy';//'Sunny'
+    var mood = (weather === 'Sunny' ? 'happy' : 'sad');
+    console.log("mood", mood);//mood sad
 
 
+    var smile = true;// or false
+    console.log('I am ' + (smile === true ? 'happy' : 'sad') + '!!');//I am happy!!
 /*******************************************
  STUDENT ACTIVITY 5:
 
@@ -452,6 +549,11 @@ console.log('------ conditionals ----------');
         - else student1 = 'sad'
     4.  console.log the results
  ********************************************/
+
+    var temp = 60;
+    var weather = 'Sunny';
+    var student1 = (weather === 'Sunny' ? 'happy': ((temp >= 80) ? 'content' : 'sad'));
+    console.log("Nested ternay weather: ", student1);//Nested ternay weather:  happy
 
 
 
@@ -497,9 +599,17 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+*/
 
+    var myctr = 1;
 
-
+    var myCounter = function(){
+        var testVar = 0;// global var
+    myctr++;
+        console.log('counter = ', myctr);//counter =  2
+    };
+    myCounter();
+    myCounter();//counter =  3
 
  /*
     function literal: passing data into a function
@@ -536,8 +646,15 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+    var value1 = 1;
+    var value2 = 2;
 
+    var myFn = function(var1, var2){
 
+        console.log('function number; ', var1 + var2 );
+    };
+// invoking a function/()parameters
+        myFn(value1, value2);//function number;  3
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -551,7 +668,17 @@ console.log('------Functions ----------');
      6.  console.log the results
  ********************************************/
 
+var myctr = 1;//global var
 
+var myCounter = function(newct){
+//var myctr = 50 local var
+    myctr += newct;// or myctr = myctr + newct;
+    console.log('counter = ', myctr);
+
+
+};
+    myCounter(5);//counter =  6
+    myCounter(2);//counter =  8
 
 
 /*******************************************
@@ -563,6 +690,14 @@ console.log('------Functions ----------');
         type) back to the point of call (referred to as a method)
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
+
+    var myFn = function(){
+    return 'jamesBond'
+};
+
+    var name = myFn();
+    console.log('name:', name);//name: jamesBond
+
 
 
 
