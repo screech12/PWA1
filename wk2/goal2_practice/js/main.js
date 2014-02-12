@@ -349,6 +349,21 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     var combined;
 
 
+    var combined = firstQtr.concat(secondQtr);
+    console.log("Concat 2 arrays:", combined);//oncat 2 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+    var combined = firstQtr.concat(secondQtr, secondHalfYr);
+    console.log("Concat 3 arrays:", combined);//Concat 3 arrays: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+    console.log("Joined arrays:", combined.join());//Joined arrays: Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sept,Oct,Nov,Dec
+
+    console.log("Took out - ", combined.pop());//Took out -  Dec
+    console.log("Show Array:", combined);//Show Array: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov"]
+
+    var results = secondHalfYr.slice(2, 4);
+    console.log("slice:", results
+    );//slice: ["Sept", "Oct"]
+
+
+
 /*
 	===============================================
 	MORE:  Operators (typeof())
