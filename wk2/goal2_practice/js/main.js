@@ -375,29 +375,77 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 console.log('------ MORE Operators - typeof() ----------');
 
 
-/*
-	===============================================
-	MORE:  Conditionals (switch())
-	-----------------------------------------------
-	
-	- “if” conditionals are perfect for comparing several sets of varying conditions  
-	- switch statements will evaluate a single conditional expression and
-		then perform an equality check against possible cases
+    console.log(typeof 5);//number
+    console.log(typeof "Hi");//string
 
-	Traditional IF and IF Else
-	if (condition) {
-		// statements1
-	};
+    var str1 = "hello";
+    console.log(typeof str1);//string
 
-	if (condition) {
-		// statements1
-	} else {
-		// statements2
-	};	
+    console.log(typeof  true);//boolean
+    console.log(typeof NaN);//number ??????
+    console.log(typeof function(){});//function
 
-*/
+    console.log(typeof obj1);//undefined
+    console.log(typeof [1,2,3,4,5]);//object
+
+
+    console.log(typeof missingVariable);//undefined
+
+    console.log(typeof myString === 'undefined');//true
+    if(typeof  myString === 'undefined'){
+        console.log("myString is undefined");//myString is undefined
+    }else{
+        console.log("myString is:", myString);
+    };
+    /*
+        ===============================================
+        MORE:  Conditionals (switch())
+        -----------------------------------------------
+
+        - “if” conditionals are perfect for comparing several sets of varying conditions
+        - switch statements will evaluate a single conditional expression and
+            then perform an equality check against possible cases
+
+        Traditional IF and IF Else
+        if (condition) {
+            // statements1
+        };
+
+        if (condition) {
+            // statements1
+        } else {
+            // statements2
+        };
+
+    */
 
 console.log('------ MORE Conditionals - Switch ----------');
+
+    //var fruit = "Oranges";
+    //var fruit = "chicken";
+    var fruit = "Mangoes";
+
+    switch (fruit){
+        case "Oranges":
+            console.log("Oranges are $0.59 a pound.");//Oranges are $0.59 a pound.
+            break;
+        case "Apples":
+            console.log("Apples are $0.32 a pound.");
+            break;
+        case "Bananas":
+            console.log("Bananas are $0.48 a pound.");
+            break;
+        case "Cherries":
+            console.log("Cherries are $3.00 a pound.");
+            break;
+        case "Mangoes":
+        case "Papayas":
+            console.log("Mangoes and papayes are $2.79 a pound.");//Mangoes and papayes are $2.79 a pound.
+            break;
+        default:
+            console.log("Sorry, we are out of " + fruit + ".");//Sorry, we are out of chicken.
+
+    };
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -408,6 +456,22 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if age 18 then console.log "adult"
 			if no age then console.log "No answer"
 ********************************************/
+
+
+    var age = 12;
+
+    switch (age){
+        case 13:
+            console.log("Child");
+            break;
+        case 18:
+            console.log("Adult");
+            break;
+        default:
+           console.log("No Answer");//No Answer
+            break;
+    };
+
 
 
 
@@ -424,6 +488,12 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
+    var bondsCars = function(){
+        return ['ferrari','lambo', 'vwBug'];
+    };
+
+    var cars = bondsCars(); //will return the array of values
+    console.log('James Bond cars, ', cars);//James Bond cars,  ["ferrari", "lambo", "vwBug"]
 
 	/* 
 		Self Executing Functions
@@ -440,6 +510,11 @@ console.log('------ MORE Functions ----------');
 			self function - combining the 2 statement above
 				var fn = (function(){})();	
 	*/	
+
+        //var fn = function(){}();
+    (function(){
+
+    })();
 
 
 /*
@@ -473,7 +548,13 @@ console.log('------ MORE Functions ----------');
 */
 console.log('------ While / Loop ----------');
 
-	
+	var numOfBeers = 10;
+
+    while(numOfBeers > 0){
+        console.log(numOfBeers +' kegs on the wall.');
+        numOfBeers--;
+    };
+
 /*
 	===============================================
 	For Loop, prebuilt logic structure
@@ -498,6 +579,9 @@ console.log('------ While / Loop ----------');
 
 console.log('------For Loop ----------');
 
+    for(var beers = 10; beers > 0; beers--){
+        console.log(beers + ' bottles of beers on the wall.');
+    };
 
 	/* 
 		array.Length
