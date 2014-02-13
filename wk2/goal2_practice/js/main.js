@@ -681,6 +681,21 @@ console.log('------For Loop ----------');
 			- in the loop just console.log the values
 ********************************************/
 
+    //var cartoonDudes = ['Superman', 'Batman', 'Wolverine', 'Iceman'];
+
+    // OR
+var cartoonDudes = [
+    'Superman',
+    'Batman',
+    'Wolverine',
+    'Iceman'
+];
+
+//    for(var i=0; i<cartoonDudes.length; i++){
+//        console.log(cartoonDudes[i]);
+         for(var i= 0, j=cartoonDudes.length; i<j; i++){
+            console.log(cartoonDudes[i]);
+    };
 
 
 /*******************************************
