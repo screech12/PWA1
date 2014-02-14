@@ -50,7 +50,7 @@
 
             if(results === "no winner"){
                 round++;
-                alert(playerOneName+":"+playerOneHealth+ " *Round "+round+" OVER*"+"* "+playerTwoName+":"+playerTwoHealth);
+                alert(fighter1[0]+":"+fighter1[2]+ " *Round "+round+" OVER*"+"* "+fighter2[0]+":"+fighter2[2]);
             }else{
                 alert(results);
                 break;
@@ -67,12 +67,14 @@
         console.log("in winnerCheck FN");
         var result="no winner";
 
-        if (playerOneHealth<1 && playerTwoHealth<1){
+        if (fighter1[2]<1 && fighter2[2]<1){
             result = "You Both Die";
-        }else if(playerOneHealth <1){
-            result = playerTwoName+"WINS!!!"
-        }else if(playerTwoHealth <1){
-            result = playerOneName+"WINS!!!"
+
+        }else if(fighter1[2] <1){
+            result = fighter2[0]+"WINS!!!"
+
+        }else if(fighter2[2] <1){
+            result = fighter2[0]+"WINS!!!"
         };
 
         return result;
