@@ -41,10 +41,10 @@
             //console.log(f2);
 
             //inflict damage
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            fighter1 [2]-=f1;
+            fighter2 [2]-=f2;
 
-            console.log(playerOneName+":"+playerOneHealth+" "+playerTwoName+":"+playerTwoHealth);
+            console.log(fighter1[0]+":"+fighter1[2]+" "+fighter2[0]+":"+fighter2[2]);
             var results = winnerCheck();
             console.log(results);
 
