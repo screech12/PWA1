@@ -1,6 +1,6 @@
 /**
  * Created by stevencreech on 01/13/14.
- * Assignment: The Duel Part1
+ * Assignment: The Duel Part2
  */
 
 
@@ -10,15 +10,15 @@
     console.log("FIGHT!!!");
 
     //player name
-    var playerOneName = "Spiderman";
+    var fighter1 = ["Spiderman", 20, 100];
     var playerTwoName = "Batman";
 
     //player damage
-    var player1Damage = 20;
+    //var player1Damage = 20;
     var player2Damage = 20;
 
     //player health
-    var playerOneHealth = 100;
+    //var playerOneHealth = 100;
     var playerTwoHealth = 100;
 
     var round = 0;
@@ -26,7 +26,7 @@
     function fight(){
         console.log('in the fight function');
 
-        alert(playerOneName+":"+playerOneHealth+" *START* "+playerTwoName+":"+playerTwoHealth);
+        alert(fighter1[0]+":"+fighter1[2]+" *START* "+playerTwoName+":"+playerTwoHealth);
 
         for (var i = 0; i < 10; i++){
             //random formula is - Math.floor(Math.random() * (max - min) + min;
