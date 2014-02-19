@@ -277,10 +277,20 @@ console.log('------ Debugging ----------');
 */
 console.log("---------- Scope & Context ----------------");
 
+    var myctr = 0;//Global
 
+    var myCounter1 = function(newct){
 
+        //myctr = newct + 10;
+        var myctr = newct + 10;
 
+        console.log('function:',myctr);//function: 15
 
+    };
+
+    myCounter1(5);
+    console.log('after function myctr:', myctr);//after function myctr: 15
+    //after function myctr: 0 Outside of the function will use the ctr of the Global level.
 /*
 	===================================================================
 	Closure
@@ -291,7 +301,42 @@ console.log("---------- Scope & Context ----------------");
 
     console.log("---------- Closure ----------------");
 
+//    var fname = 'James';
+//
+//    var nameFN = function (var1){
+//        var firstName = var1;
+//        var lastName = 'Bond';
+//        var name = firstName + '' + lastName;
+//
+//        console.log('first & last name: =', name);
+//        return name;
+//    };
+//
+//    var fullName = nameFN(fname);
+//    console.log('returned full name; ', fullName);
+//    console.log('var fname:', fname);
+//    //console.log('first name: = ', firstName);//outside of scope #error
+//    //console.log('last name: = ', lastName)////outside of scope #error
 
+//    var fname = 'James';
+//
+//    var nameFN = function (var1){
+//        var firstName = var1;
+//        var lastName = 'Bond';
+//        var name = firstName + '' + lastName;
+//
+//        var closureFN = function(){
+//            console.log('first & last name: =', name);
+//        };
+//        return closureFN;
+//    };
+//
+//    var fullName = nameFN(fname);
+//    console.log('returned full name; ', fullName);
+//    console.log('var fname:', fname);
+//    //console.log('first name: = ', firstName);//outside of scope #error
+//    //console.log('last name: = ', lastName)////outside of scope #error
+//    fullName();
 
     /*
     Definition:  Closure:
@@ -320,5 +365,20 @@ console.log("---------- Scope & Context ----------------");
                   called a closure.  Simply accessing variables outside of its
                   immediate lexical scope creates a closure.
     */
+
+
+    a = (function(){
+        var privateFunction: function(){
+            alert('hello');
+        }
+
+        return {
+            publicFunction: function(){
+                privateFunction();
+            }
+        }
+    })();
+
+    a.publicFunction();
 
 })(); // end wrapper
