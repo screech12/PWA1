@@ -30,25 +30,46 @@ console.log('------Objects ----------');
 
 //{KEY : Value} pairings,
 
+//             KEY    VALUE
+    person = {'name':'bond', 'age':35, 'secretAgent':true};
 
+    //                 OR
+
+    person = {name:'bond', age:35, secretAgent:true};
 
 /* accessing object properties
      - below are 3 ways you can access the property information in an object
          1. dot notation
-         2. index notation using a variable as the index
+         2. index notation using a variable as the index VAR[]
          3. index notation using a string
 
      - also keep in mind that since the keys can be strings, you could access the keys using string variables
  */
 
 
-// setter
-
-
-
-//nested objects
-
-
+//    var personAge = 'age';
+////                1               2
+//    console.log(person.name, person[personAge],
+//        //   3
+//        person['secretAgent']);//bond 35 true
+//
+//// setter
+//
+//    person['age'] = '40'; //2
+//    person.name = "JamesBond";//1
+//    console.log(person);//Object {name: "JamesBond", age: "40", secretAgent: true}
+//
+//
+////nested objects, OBJECT WITHIN AN OBJECT
+//    // not using information directly from above for this example
+//
+//    person = {birthday:{month:02, day:12}, name:'bond'};
+//    console.log(person);//Object {birthday: Object, name: "bond"}
+//    //birthday: Object
+//    //day: 12
+//    //month: 2
+//    console.log(person['birthday']['month']);//2, nav down to birthday, nav down to month (just like a file tree)
+//    console.log(person.birthday.month);//1. dot notation
 
 //---------------------------------------------
 
@@ -56,7 +77,26 @@ console.log('------Objects ----------');
 
 console.log('------Object within an object, Arrays, Function ----------');
 
+//property
+    var thatGuy ={
+        name: 'JamesBond',
+        course: 'PWA1',
+        address:{
+            num: 3000,
+            street: 'University',
+            city: 'Orlando',
+            cornerOf:['University', 'Semoran']
+        },// above is setting up, bottom is show.
+        //function
+        showMyAddress: function(){
+            var addr = this.address.street +',' + this.address.city;
+            return addr;
+        }
+    };
 
+    console.log(thatGuy.showMyAddress());//University,Orlando
+
+    console.log(thatGuy.address.street + ',' + thatGuy.address.city);//University,Orlando
 
 //properties & methods
 /*
@@ -67,10 +107,18 @@ console.log('------Object within an object, Arrays, Function ----------');
 */
 
 console.log('------Objects - properties & methods ----------');
+    //PROPERTY + FUNCTIONS = METHODS
 
 //Method 1 "Basic"
 
+    var fsStudent = {};//object
+    fsStudent.age = 22;// We than create the object
+    fsStudent.career = 'Web Dev';
 
+    fsStudent.sayHello = function(){
+        console.log('Hello!');//Create method
+
+    };
 
 
 // above, we first initialize the object, then we created 2 properties 
@@ -79,7 +127,11 @@ console.log('------Objects - properties & methods ----------');
 
 // we can also access the methods and properties of an object using  [ ] , 
 // 	by using their name as a string - all of the below are valid:
+    fsStudent.sayHello();//without this added will not display console log //Hello
+    fsStudent['sayHello']();// index notation //Hello
 
+    console.log(fsStudent.age);//22
+    console.log(fsStudent['age']);// index notation //22
 
 
 
@@ -93,7 +145,19 @@ Method 2 "OBJECT Literal"
 */
 
 
+        var fsStudent = {
+            age: 22,
+            career: 'Web Dev',
+            sayHello: function(){
+                console.log('Hello!');
+            }
+        };
 
+        fsStudent.sayHello();
+        fsStudent['sayHello']();
+
+        console.log(fsStudent.age);
+         console.log(fsStudent['age']);
 
 //---------------------------------------------
 
@@ -124,9 +188,33 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 
 // this is integrating multiple data types - object with an array of objects
 
+  var obj1 = {
+      schoolName: 'Full Sail',
+      address: '123 University Ave',
+      studentCount:16000,
+      students:[
+        {name: 'John Smith', GPA: 3.5, classes:['PWA1', 'PWA2']},
+        {name: 'Steven Hope', GPA: 4.0},
+        {name: 'Pam Kitti', GPA: 3.9}
+    ]
+
+    };
+
+    console.log(obj1.schoolName);//dot syntax Full Sail
+    console.log(obj1['schoolName']); //index syntax
+
+    var newCnt = 'studentCount';
 
 
-/* ----------------------------------------------------------------------------
+    console.log(obj1[newCnt]);//16000
+
+    var fieldName1 = "address";
+    console.log(obj1[fieldName1]);//123 University Ave
+
+    console.log('Steven Hope',obj1.students[2].GPA);//Steven Hope 3.9 
+    console.log('Steven Hope',obj1['students'][2]['GPA']);
+
+     /*----------------------------------------------------------------------------
  STUDENT ACTIVITY 2:
 
     1.  Using the above code, create a function that will find the average grade
