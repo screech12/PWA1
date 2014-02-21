@@ -211,39 +211,70 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
     var fieldName1 = "address";
     console.log(obj1[fieldName1]);//123 University Ave
 
-    console.log('Steven Hope',obj1.students[2].GPA);//Steven Hope 3.9 
-    console.log('Steven Hope',obj1['students'][2]['GPA']);
+    console.log('Steven Hope',obj1.students[1].GPA);//Steven Hope 4
+    console.log('Steven Hope',obj1['students'][1]['GPA']);
 
      /*----------------------------------------------------------------------------
  STUDENT ACTIVITY 2:
 
     1.  Using the above code, create a function that will find the average grade
-        a. create an anonymous function named "gradeAvg"
+        a. create an ANONYMOUS FUNCTION named "gradeAvg"
         b. the function should accept as a parameter the object above
-        c. create a for loop to total up the average grade for ALL students
-        d. "return" the average GPA answer to the item that called the function
+        c. create a FOR LOOP to total up the average grade for ALL students
+        d. "RETURN" the average GPA answer to the item that called the function
 
     2.  console.log the average grade by calling the gradeAvg method.
 ----------------------------------------------------------------------------- */
+    var gradeAvg = function(obj){
+       var count = 0;
+       var total = 0; //holds (stores)the total ad it added up.
 
 
+        for(i = 0,j = obj.students.length; i<j; i++){
+            count++;// calculate how many times we go through the loop
+            total = total + obj.students[i]['GPA'];
+        };
+        return total/count
+    };
 
+    //gradeAvg(obj1)//CALL to function, calling Or invoking, obj1 is the object that is being used above from var obj1{} everything between the brackets
+
+    console.log('Average Grade:', gradeAvg(obj1));
+
+
+    //*****step1 create the var = function, 2, create a call 'gradeAvg(obj1)', step3 change 'gradeAvg(obj1)' console out to 'console.log('Average Grade:', gradeAvg(obj1));' add a string to the front "'Average Grade:'," to help id the answer
+    //step 4, need the code with the function, create Var in order to keep track of info needed "var count = 0; var total = 0;"
+    //step 5 create a for loop "for(i = 0,j = obj.students.length; i<j; i++){};" STUNDENTS.LENGTH go through the entire length of the string
+    //step 6 create a count =1 "count++;"
+    //Step 7 Need to get grade total of all the GPA together. "total = total + obj.students[i]['GPA'];" The[i] is the index of the students string, first student 0, than 1, than 2. Each TOTAL will add to the next TOTAL of the GPA. "3.5 + 4.0 + 3.9"
+    //Step 8, Create a RETURN get the answer. n order to get the answer of the avg., Wew need to add total/count. (divided by).
 
 /* ===============================================================
-	The for-in object loop
-------------------------------------------------------------------	
+	The for-in object loop, FOR EACH LOOP non in other laug.
+------------------------------------------------------------------	//Filter through the obj allowing us to pull out all the KEYS and Values for the keys, and /or values
 
+//syntax ...below...for(variable)
 	for(var key in obj){
 		obj[key]
 	}
 */
     console.log("---------- Object - For In Loop ----------------");
+//keys are in color "name: gender: job", Strings assoc. with keys "JamesBond, male, student"
+    var students = {name:"JamesBond",gender:"male",job:"student"};
+
+    for(var key in students){
+        console.log('Key Name:',key);
+        console.log('Value of the key[',key,']:',students[key]);
+
+    };
 
 
 
+//Step1 create Variable. Step 2 Create For Loop " for(var key in students){};" The obj name is students.
+    //Step 3 Create Console.log "console.log('Key Name:',key);" Next what is the value of each of the keys? "console.log('Value of the key[',key,']:',students[key]);"
 /*
 	===============================================
-	MORE Object infomation
+	MORE Object information
 	
 		- most strictly-typed languages have clear separations in their data types 
 			and classical behavior
@@ -274,7 +305,15 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 */
     console.log('------ Objects - Converting Datatypes ----------');
 
+    var myNum = 1;
+    myString = String(myNum);
+    console.log('myString:', typeof myString, myString);//myString: string 1. This is equal to string 1 not the number 1
+    myBool = Boolean(myString);// in Boolean a 1 is = to true and 0 is equal to false. At this point mystring is is now a number 1
+    console.log('myBool:,', typeof  myBool, myBool);// if the string comes back as true, than we know that the string 1 has been converted //myBool:, boolean true
 
+
+//STEP 1, Create a Var initialize it a number.Step 2 use the string item to convert myNum into a string. Step 3 Create a console.log in order to see if the it has converted to a string.(typeof) what type object is it.
+    //Step 4 setup an example of a Boolean "console.log('myBool:,', typeof  myBool, myBool);"
 
 /*
 	- because these values act as objects, the data types also have methods and 
@@ -284,19 +323,50 @@ console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 */
 
 // #1 - shows string length
+    myStr = 'OMG';
+    console.log(myStr.length);//3
 
 
 // #2 - shows array length
+
+    myArr = [6, 10];
+    console.log(myArr.length);//2
 	
 
 // #3 - shows and array of objects, inside of an object length
-	
+
+    var obj1 = {
+        schoolName:'Full Sail',
+        address:'123 University Blvd',
+        studentCount:16000,
+        students:[
+            {name:'Jane Doe', GPA:2.6, classes:['PWA1','ARD']},
+            {name:'Albert Einstein', GPA:4.0},
+            {name:'James Bond', GPA:3.9}
+        ]
+    };
+
+        console.log('number of object fields',obj1.
+students.length);//number of object fields 3
 
 console.log('------ MORE Object examples - Objects/Functions ----------');
 
 // showing a function call and creating a method
 
+    var fn = function(name, course){
+        return{
+            sayHi: function(){
+            console.log("My name is " + name + " I am in Course " + course);
 
+            }
+        }
+    };
+
+    fn("JamesBond","PWA1").sayHi();//My name is JamesBond I am in Course PWA1
+
+// Step 1 create a function, Step 2 Create a call "fn("JamesBond","PWA1")" passing this into it.
+    //Step 3 Just to output a console.log. You can Create a rtn.
+    //Step 4 If you want to call the method (that was created) you can put it on the backend of the call.
 
 /*
 	==================================================================
@@ -309,22 +379,24 @@ console.log('------ MORE Object examples - Objects/Functions ----------');
 console.log('------------ DOCUMENT OBJECT MODEL -------------------');
 
 //Window DOM object
-/*
- console.log(window);
- console.log(window.location);
- console.log(window.history);
- console.log(window.navigator);
+
+// console.log(window);
+// console.log(window.location);
+// console.log(window.history);
+// console.log(window.navigator);
 
  //Document DOM object
  console.log(document);
  console.log(document.body);
  console.log(document.head);
- */
 
 
-/*
+
+/* //Selectors allows us to select something on a tree
 	==================================================================
+	syntax below:
 	document.getElementById(string);
+	TARGET ONLY ONE ITEM
 	------------------------------------------------------------------
 	- Finds an html element on the page by it's CSS ID.
 	- RETURNS a single DOM object.
@@ -340,25 +412,50 @@ console.log('------------ DOCUMENT OBJECT MODEL -------------------');
 
 console.log('------------ getElementById -------------------');
 
+    var playbox = document.getElementById('playbox');
+    console.log(playbox);
+    playbox.style.backgroundColor = 'Red';
+
+    //in Browser under elements will find playbox body/container/nav
+    //Step 1 doc search "document.getElementById('playbox');", Step 2 change to a var in order to initialize it later so you can use it."var playbox = document.getElementById('playbox');"
+    //Step 3 console.log out "console.log(playbox);"//div#playbox, the div id is represented by (#)
+    //Step change BG color to red, "playbox.style.background.Color = 'Red';" This will also change the HTML color to "RED" Changes it on the Browser pg not the Orginal HTML pg.
 
 
 
-/*
-	==================================================================
-	document.getElementsByTagName(string);
-	------------------------------------------------------------------
-	- Finds all html elements on the page with a matching html tag
-	- RETURNS an array (collection) of DOM objects.
-*/
+    /*
+        ==================================================================
+     syntax below
+        document.getElementsByTagName(string);
+        ------------------------------------------------------------------
+        - Finds all html elements on the page with a matching html tag, ABLE TO TARGET multiple ITEMS.
+        - RETURNS an array (collection) of DOM objects.
+    */
 
 console.log('------------ getElementsByTagName -------------------');
 
+    var anchors = document.getElementsByTagName('a');
+    console.log(anchors);//[a.navitem, a.navitem, a.navitem, a.navitem, item: function]
+    console.log(anchors[1]);//a.navitem
+
+    for(i=0, max=anchors.length; i<max; i++){
+        console.log(anchors[i]);
+    }
 
 
+
+
+
+
+//Step 1 Target anchor tags<a></a> under the <li></li> (use syntax) and change to a a variable. " var anchors = document.getElementsByTagName('a');"
+    //Step2 Create console.log "console.log(anchors);"
+    //Step3 Target the anchor with index of 1, "console.log(anchors[1]);"
+    //Step4 Create a For Loop, for(i=0,max=anchors.length; i<max; i++){console.log(anchors[i]);}
 
 /*
 	==================================================================
-	document.querySelectorAll(string);
+	syntax below
+	document.querySelectorAll('string');
 	------------------------------------------------------------------
 		- Uses a CSS selector expression to find all html elements that match the expression.
 		- Works much like stylesheet declarations (class and ID prefixes)
@@ -369,12 +466,22 @@ console.log('------------ getElementsByTagName -------------------');
 
 console.log('------------ querySelectorAll -------------------');
 
+    var nav = document.querySelectorAll('#nav li:last-child');
+    console.log(nav);//[div#nav, item: function]
+    //[li, li, li, li, item: function]
+    //[li, item: function]
+    var cf = document.querySelectorAll('.clearfix');
+    console.log(cf);//[ul.clearfix, item: function]
 
-
+// Step 1 Everything within a ID Tag, Create doc syntax. Target the ID by assigning a Var. "var nav = document.querySelectorAll('#nav');" Step 2 create console.log
+// Step 3 Now we want to target all the info in the <li> In the Syntax add LI to the string. "var nav = document.querySelectorAll('#nav li');"
+    //Step 4 If we want to filter even more The string can be told filter too the last child, just add it to the string BUT remember it is layer below the li " var nav = document.querySelectorAll('#nav li:last-child');"
+    //Step 5 Class Name vs the ID "var cf = document.querySelectorAll('.clearfix');"
 
 /*
 	==================================================================
-	document.querySelector(string);
+	syntax below
+	document.querySelector('string');
 	------------------------------------------------------------------
 		- Works just like querySelectorAll, but only returns the first match,
 			If multiple exist, return the first
@@ -383,10 +490,13 @@ console.log('------------ querySelectorAll -------------------');
 */
     console.log('------------ querySelector -------------------');
 
+    var nav = document.querySelector('#nav');
+    console.log(nav);//div#nav
+
+    //return the first item
 
 
-
-
+//
     /*
         ==================================================================
         TRAVERSAL
@@ -407,9 +517,23 @@ console.log('------------ querySelectorAll -------------------');
         Will be used in ALL future assignments.
     */
     console.log('------------ TRAVERSAL -------------------');
+    var apple = document.querySelectorAll('#nav li a')[2];
+    console.log(apple);//a.navitem
+    //console.log(apple.parentNode);//li
+    console.log(apple.parentNode.parentNode);//ul.clearfix
+    console.log(apple.parentNode.parentNode.parentNode);//div#nav
+    //console.log((apple.parentNode.parentNode.parentNode).childNodes);
+    //console.log((apple.parentNode.parentNode.parentNode).nextSibling);//#text
 
 
 
+//Nav up.
+
+// First target the APPLE <li> Create the selector, than make it a Var. "var apple = document.querySelectorAll('#nav li a')[2];"
+    //Step 2 console.log out "console.log(apple);"
+    // Next in order to find out what the parent node is. Which is above the link. "console.log(apple.parentNode);" Should be able to look at browser open the <li> and nav down to see child link, which is APPLE
+    //Step3, if you want to nav up one more time. You would add parentNode again to the string. "console.log(apple.parentNode.parentNode);"
+    //Repeat
 
 /*
 	==================================================================
@@ -419,7 +543,7 @@ console.log('------------ querySelectorAll -------------------');
 		- To access these attributes, there are specific setter/getter methods.
 
         Syntax:
-        - element.setAttribute(attr, value)
+        - element.setAttribute(attr, 'value')
             - always initializes an attribute to a new value
         - element.getAttribute(attr)
             - always returns a string
@@ -427,7 +551,31 @@ console.log('------------ querySelectorAll -------------------');
         attr = href, src, class
 */
 
+    console.log('-------------Manipulating Attributes setAttribute / getAttribute-----');
 
+
+//    var navLinks = document.querySelectorAll('#nav li');
+//
+//    for(var i= 0, max=navLinks.length; i<max; i++){
+//        var href = navLinks[i].firstChild.getAttribute('href');
+//        console.log('Manipulation HREF:',href);//Manipulation HREF: #1, Manipulation HREF: #2, Manipulation HREF: http://apple.com, Manipulation HREF: http://google.com
+//
+//        if(href === '#1'){
+//            var href2 = navLinks[i].firstChild;
+//            console.log(href2);//a.navitem (<a class="navitem" href="#1>Link 1</a>)
+//            href2.setAttribute('href', 'http://www.fullsail.com');
+//        };
+//    };
+
+
+    // Setting link to = url.
+    //Step 1 Create the syntax and add the Var.
+    //Step 2 need to filter through the HTML to find the item for the link. Looking for "href" with a (#1) sign in it. Now we need to replace it with the address.
+    //Step 3 we need to setup a loop to filter through to find the (#1) "for(var i= 0, max=navLinks.length; i<max; i++){};"
+    //Step4 create a code with a var "var href = navLinks[i].firstChild.getAttribute('href');" Next console.log "console.log('Manipulation HREF:',href);"
+    //Next need to locate the (#1) is. Set up a conditional "if(href === '#1'){};"
+    //Next create code "var href2 = navLinks[i].firstChild;" New var. and console.log "console.log(href2);"
+    //Step 5 Create a setAttribute "href2.setAttribute('href', 'http://www.fullsail.com');" Now if you roll over the link in browser you will see fullsail being displayed
 
 /*
 	==================================================================
@@ -445,8 +593,70 @@ console.log('------------ querySelectorAll -------------------');
 
 console.log('------------ Manipulating CSS Classes -------------------');
 
+//    var navLinks = document.querySelectorAll('#nav li');
+//
+//    for(var i= 0, max=navLinks.length; i<max; i++){
+//        var href = navLinks[i].firstChild.getAttribute('href');
+//        console.log('Manipulation HREF:',href);//Manipulation HREF: #1, Manipulation HREF: #2, Manipulation HREF: http://apple.com, Manipulation HREF: http://google.com
+//
+//        if(href === '#1'){
+//            var href2 = navLinks[i].firstChild;
+//            console.log(href2);//a.navitem (<a class="navitem" href="#1>Link 1</a>)
+//            href2.setAttribute('href', 'http://www.fullsail.com');
+//        };
+//        var aClass = navLinks[i].firstChild.getAttribute('class');
+//        console.log('Manipulation CLASS:', aClass);//Manipulation CLASS: navitem
+//
+//        navLinks[i].firstChild.setAttribute('class','navitems active');
+
+
+
+//Changing the class to be active
+    //Step1 a var. "var aClass = navLinks[i].firstchild.getAttribute('class');
+    //Step2 console.log "console.log('Manipulation CLASS:', aClass);"
+    //Next set the naveitem to active. "navLinks[i].firstChild.setAttribute('class','navitems active');" Go to Browser and you can see the links have changed to wht background
+
+  /*
+         ==================================================================
+         Manipulating HTML
+         ------------------------------------------------------------------
+         HTML elements also have a property called "innerHTML" .innerHTML is both a getter and a setter property (using strings)
+
+  */
+
+console.log('-------------Manipulating HTML -------');
+
+//    navLinks[i].firstChild.setAttribute('href','http://google.com');
+
+  //};
+
+    //changing all the links to google.com
+    //Step 1 target the href tags and change all to google .com Create a new navLinks "navLinks[i].firstChild.setAttribute('href','http://google.com');" In the browser all links once rolled over should see google .com.
+
+//    var navLinks = document.querySelectorAll('#nav a');
+//    console.log(navLinks[1].innerHTML);//link2
+//
+//    navLinks[1].innerHTML = 'This link rocks!'
+
+    //Another example: change the link2 to read this link Rocks. Setup another selector.Create a var "var navLinks = document.querySelectorAll('#nav a');"
+    //Output console.log " console.log(navLinks[1]);"
+    //Next pullout the info in that anchor link, add .innerHTML "console.log(navLinks[1].innerHTML);"
+    //Now set the link "navLinks[1].innerHTML = 'This link rocks!'"
+
+    // If you want all the links to be setup to read click me 1, with the index number, 1,2,3 Use the following steps.
+
+//    for(var i = 0, max = navLinks.length; i<max; i++){
+//        navLinks[i].innerHTML = 'Click Me '+i
+//
+//    };
+    //Step1 setup a loop." querySelectorAll;"
+    //Step2 "navLinks[i].innerHTML = 'Click Me'"
+    //Step3 add +1 to add to it index number
+
+
 
 /*
+
 	==================================================================
 	Replacing an HTML container with new HTML
 	------------------------------------------------------------------
@@ -457,7 +667,12 @@ console.log('------------ Manipulating CSS Classes -------------------');
 Sample Link: http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.MEDIUM.jpg
 */
 
+    var bigImage = document.querySelector('#contentPreview img');
+    bigImage.setAttribute('src','http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.MEDIUM.jpg');
 
+    //Step 1 setup a var. "var bigImage = document.querySelector('#contentPreview img');"
+    // Step 2 use the setAttribute "bigImage.setAttribute();"
+    //Step 3 the first parameter you will need to change is the attribute you want to change "src" Next copy the http link."bigImage.setAttribute('src','http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWFPIUQQ3K.MEDIUM.jpg');"
 
 /*
 	==================================================================
@@ -491,10 +706,26 @@ Sample Link: http://www.instructables.com/files/deriv/FJI/WGSW/FPIUQQ3K/FJIWGSWF
 console.log('------------ DOM Events Ex 1-------------------');
 
 var nav = document.querySelectorAll('#nav li a');
-
+//    for(var i= 0, max=nav.length; i < max; i++){
+//        console.log(nav[i]);
+//
+//        nav[i].onclick = function(e){
+//            console.log(e);
+//
+//            e.preventDefault();
+//            return false;
+//        };
+//
+//    };
 
 /*
 // this just console.log's when a click occurs
+//Step1 Create a Var to run a querySelectorAll.
+//Step2 Create a for loop."for(var i= 0, max=navLinks.length; i<max; i++){};"
+//Step3 Create a console.log " console.log(nav[i]);" Show all 4 anchor tags
+//Step5 Setup the on click event " nav[i].onclick = function(e){};"
+//Step6 console.log "  console.log(e);"
+//Remember to add e.preventDefault(); and return false: at the end of all click event files
 
 
 
@@ -529,25 +760,63 @@ var nav = document.querySelectorAll('#nav li a');
 
 
 console.log('------------ DOM Events Ex 2 -------------------');
-/*
+
 // this example changes the clicked link to the active class
 
+// for(var i = 0, max = nav.length; i < max; i++){
+//
+//    nav[i].onclick = function(e){
+//
+//        for(var ii = 0, max2 =nav.length; ii < max2; ii++){
+//            nav[ii].setAttribute('class','navitem');
+//        }
+//
+//            console.log(this);
+//            this.setAttribute('class','navitem active');
+//
+//            e.preventDefault();
+//            return false;
+//    }
 
 
+ //};
 
-*/ 
+
+// Step 1 the first loop allows us to get our onclick in place. Create another for loop.
+    //Step 2 Create a second for Loop.
+    //Step 3 Make the link active "this.setAttribute('class','navitem active');"
 
 
 
 console.log('------------ DOM Events Ex 3 -------------------');
-/*
+
 // a more efficient way to do the above
 
+    nav[0].setAttribute('class','navitem active');
+
+    for(var i = 0, max = nav.length; i < max; i++){
+
+        nav[i].onclick = function(e){
+
+//            for(var ii = 0, max2 =nav.length; ii < max2; ii++){
+//                nav[ii].setAttribute('class','navitem');
+//            }
+
+            document.querySelector('#nav li a.active').setAttribute('class','navitem');
+
+            console.log(this);
+            this.setAttribute('class','navitem active');
+
+            e.preventDefault();
+            return false;
+        }
 
 
+    };
+
+// A more effective code would be
 
 
-*/
 
 
 })(); // end wrapper
