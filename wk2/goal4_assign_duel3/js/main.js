@@ -1,6 +1,6 @@
 /**
- * Created by stevencreech on 01/13/14.
- * Assignment: The Duel Part2
+ * Created by steven_creech on 02/19/14.
+ * Assignment: The Duel Part3
  */
 
 
@@ -10,8 +10,9 @@
     console.log("FIGHT!!!");
 
     //player name
-    var fighter1 = ["Spiderman", 20, 100];
-    var fighter2 = ["Batman" , 20, 100];
+    //fighter1 = {name:'Spiderman', damage:20, health:100};
+    //fighter2 = {name:'Batman', damage:20, health:100};
+    var fighters = [{name:'Spiderman', damage:20, health:100},{name:'Batman', damage:20, health:100}];
 
     //player damage
     //var player1Damage = 20;
@@ -23,66 +24,88 @@
 
     var round = 0;
 
+
+
+
     function fight(){
-        console.log('in the fight function');
+        //console.log('in the fight function');
 
-        alert(fighter1[0]+":"+fighter1[2]+" *START* "+fighter2[0]+":"+fighter2[2]);
+        //alert(fighter1[0]+":"+fighter1[2]+" *START* "+fighter2[0]+":"+fighter2[2]);
+        var fhtBtn = document.querySelector('#fight_btn');
+        fhtBtn.onclick = fight;
+        //var round = 0;
+    //function fight(){
 
-        for (var i = 0; i < 10; i++){
+
+        //for (var i = 0; i < 10; i++){
             //random formula is - Math.floor(Math.random() * (max - min) + min;
             //console.log(i);
 
-            var minDamage1 = fighter1[1] * .5;
-            var minDamage2 = fighter2[1] * .5;
-            var f1 = Math.floor(Math.random()*(fighter1[1]-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(fighter2[2]-minDamage2)+minDamage2);
+            //var minDamage1 = fighters[0] * .5;
+            //var minDamage2 = fighters[1] * .5;
+            var f1 = Math.floor((Math.random()*fighters[0].damage) + fighters[0].damage * .5);
+            var f2 = Math.floor((Math.random()*fighters[1].damage) + fighters[1].damage * .5);
 
             //console.log(f1);
             //console.log(f2);
 
             //inflict damage
-            fighter1 [2]-=f1;
-            fighter2 [2]-=f2;
+            fighters [0].health-=f1;
+            fighters [1].health-=f2;
 
-            console.log(fighter1[0]+":"+fighter1[2]+" "+fighter2[0]+":"+fighter2[2]);
+            //console.log(fighters[0]+":"+fighters[1]+" "+fighters[0]+":"+fighters[1]);
             var results = winnerCheck();
             console.log(results);
 
             if(results === "no winner"){
                 round++;
-                alert(fighter1[0]+":"+fighter1[2]+ " *Round "+round+" OVER*"+"* "+fighter2[0]+":"+fighter2[2]);
+                var roundNum = document.querySelector('#fight_btn h4');
+                roundNum.innerHTML = ('ROUND ' + round + ' OVER');
+                var scrLks = document.querySelectorAll("#scores p");
+                scrLks[0].innerHTML = (fighters[0].name+':'+fighters[0].health);
+                scrLks[1].innerHTML = (fighters[1].name+':'+fighters[1].health);
+
+                //alert(fighter1[0]+":"+fighter1[2]+ " *Round "+round+" OVER*"+"* "+fighter2[0]+":"+fighter2[2]);
             }else{
-                alert(results);
-                break;
-            };
+                var ftBtn = document.querySelector('#fight_btn a');
+
+                ftBtn.innerHTML = ("DONE!!!");
+                var rstLks = document.querySelectorAll('#scores p');
+
+                rstLks[0].innerHTML = ('');
+                rstLks[1].innerHTML = (results + '');
+
+                //alert(results);
+               // break;
 
 
 
 
-        };
 
-    };
+        }
+
+    }
 
     function winnerCheck(){
         console.log("in winnerCheck FN");
         var result="no winner";
 
-        if (fighter1[2]<1 && fighter2[2]<1){
-            result = "You Both Die";
+        if (fighters[0].health < 1 && fighters[1].health < 1){
+            result = "Both Fighters Die";
 
-        }else if(fighter1[2] <1){
-            result = fighter2[0]+"WINS!!!"
+        }else if(fighters[0].health <1){
+            result = fighters[1].name +" WINS!!!"
 
-        }else if(fighter2[2] <1){
-            result = fighter2[0]+"WINS!!!"
-        };
+        }else if(fighters[1].health <1){
+            result = fighters[0].name +" WINS!!!"
+        }
 
         return result;
 
-    };
+    }
 
     /******* The program gets started below *****/
-    console.log('program starts');
+    //console.log('program starts');
     fight();
 
 
