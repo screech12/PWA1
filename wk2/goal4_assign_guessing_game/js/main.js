@@ -12,6 +12,7 @@
 
 /*
 Create a variable to store a random integer within the range 1-10.
+
  Create variables that reference the DOM(html) elements or 1 object literal
 
  Create an .addEventListner event listener on the guess button to listen for a click event.
@@ -36,4 +37,17 @@ Create a variable to store a random integer within the range 1-10.
 
 */
 
+    //Create a variable to store a random integer within the range 1-10. Use math.floor for random num.
+
+    var bestGuess = Math.floor(Math.random() * 10+1);
+    console.log(bestGuess); //random nm between 1 thru 10;
+    var guesses = 0;
+//Create variables that reference the DOM(html) elements or 1 object literal
+
+    //Create an .addEventListner event listener on the guess button to listen for a click event.
+
+    
+    var input;
+    var output;
+    var button;
 })();
