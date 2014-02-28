@@ -46,8 +46,23 @@ Create a variable to store a random integer within the range 1-10.
 
     //Create an .addEventListner event listener on the guess button to listen for a click event.
 
-    
+
     var input;
     var output;
-    var button;
+    var validate;
+    document.getElementsByName('button').onclick = function(e){
+        console.log(e);
+        e.preventDefault();
+        return false;
+    };
+    //Create a function to validate the users input: Validate that a number was entered. AND Validate that the number entered is between 1 and 10
+
+    function validate(){
+        var valid = true;
+        if(document.getElementById ('input').value.length == 0);
+        return valid
+    };
+
+
+        console.log(validate);
 })();
